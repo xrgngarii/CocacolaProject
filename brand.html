@@ -1,0 +1,3228 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <title>brand</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Brand | 코카콜라 - Pure Joy">
+    <meta property="og:description" content="코카콜라 패밀리 브랜드 라인업을 감각적인 슬라이더로 구성한 Brand 페이지입니다.">
+    <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/brand.html">
+    <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_brand.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brand | 코카콜라 - Pure Joy">
+    <meta name="twitter:description" content="코카콜라 패밀리 브랜드 라인업을 감각적인 슬라이더로 구성한 Brand 페이지입니다.">
+    <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_brand.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+    <style>
+      html,
+      body {
+        overflow-x: hidden;
+        background-color: #1a1a1a;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      p,
+      div,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "SUIT", "나눔고딕", sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      ul,
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff8f2;
+      }
+      p,
+      h1,
+      h2,
+      h3 {
+        color: #fff8f2;
+      }
+      address {
+        font-style: normal;
+      }
+      .hide {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+      :root {
+        --gutter: clamp(20px, 4vw, 40px);
+        --can-w: 249px;
+        --can-h: 420px;
+        --limited-logo-w: 155px;
+        --limited-logo-h: 52px;
+      }
+      .skip_menu {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        z-index: 1000;
+      }
+      .skip_menu a {
+        position: absolute;
+        top: -30px;
+        padding: 5px 10px;
+        white-space: nowrap;
+        background: #1a1a1a;
+        color: #fff;
+      }
+      .skip_menu a:focus {
+        top: 0;
+      }
+      
+      .header_wrap {
+        width: 100%;
+        background: #1a1a1a;
+        position: static;
+        top: 0;
+      }
+      .header {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1424px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(12px, 3vw, 48px);
+        padding: clamp(20px, 3vw, 40px) clamp(16px, 4vw, 64px);
+        box-sizing: border-box;
+      }
+      .logo img {
+        width: clamp(108px, 7.5vw, 145px);
+        height: auto;
+        display: block;
+      }
+      .logo_link {
+        display: inline-block;
+        position: relative;
+      }
+      .logo_link img {
+        display: block;
+      }
+      .logo_default {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+      }
+      .logo_hover {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      .logo_link:hover .logo_default,
+      .logo_link:focus-visible .logo_default {
+        opacity: 0;
+      }
+      .logo_link:hover .logo_hover,
+      .logo_link:focus-visible .logo_hover {
+        opacity: 1;
+      }
+      .header--overlay {
+        position: absolute;
+        top: 0;
+        background: transparent;
+      }
+      .header_wrap {
+        width: 100%;
+        background: #1a1a1a;
+      }
+      .header--solid {
+        position: relative;
+        top: 0;
+        background: #1a1a1a;
+      }
+      .menu_btn {
+        display: none;
+      }
+      .menu_btn img {
+        width: clamp(20px, 2vw, 28px);
+        height: auto;
+        display: block;
+      }
+      .gnb {
+        position: relative;
+        flex: 0 1 760px;
+        min-width: 280px;
+      }
+
+      .gnb .depth1 {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        gap: clamp(24px, 4vw, 64px);
+        max-width: none;
+        margin: 0 auto;
+      }
+
+      .gnb .depth1 > li {
+        position: relative;
+      }
+
+      .gnb .depth1 > li > a {
+        display: block;
+        padding: 20px 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff8f2;
+        letter-spacing: 0.2px;
+        transition: color 180ms cubic-bezier(.22,.61,.36,1), transform 180ms cubic-bezier(.22,.61,.36,1), opacity 180ms cubic-bezier(.22,.61,.36,1);
+      }
+
+      .gnb .depth1 > li > a:hover,
+      .gnb .depth1 > li > a:focus-visible,
+      .gnb .depth1 > li.active > a {
+        color: #f40009;
+        transform: translateY(-1px);
+      }
+
+      .top_menu {
+        flex: 0 0 auto;
+        white-space: nowrap;
+      }
+
+      .top_menu ul {
+        display: flex;
+        align-items: center;
+        gap: clamp(6px, 1vw, 12px);
+        white-space: nowrap;
+      }
+
+      .top_menu ul li a {
+        color: #fff8f2;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .search {
+        position: relative;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .search_icon {
+        position: relative;
+        z-index: 201;
+        cursor: pointer;
+      }
+      .search {
+        position: relative;
+        z-index: 200;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .search_form {
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition:
+          width 0.3s ease,
+          opacity 0.3s ease;
+      }
+      #search_toggle:checked ~ .search_form {
+        width: 144px;
+        opacity: 1;
+      }
+      .search_form input {
+        width: 144px;
+        height: 30px;
+        background: url("cola_images/search_box.png") no-repeat center /
+          cover;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 12px;
+      }
+      .search:focus-within .search_form {
+        width: 144px;
+        opacity: 1;
+      }
+      .search button {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+      }
+      .search_icon img {
+        width: clamp(18px, 2vw, 26px);
+        height: auto;
+      }
+      .icon_tab {
+        display: none;
+      }
+      .search_icon{
+        width: 52px;
+        height: 52px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        box-shadow:
+          0 10px 24px rgba(0,0,0,.35),
+          inset 0 1px 0 rgba(255,255,255,.14);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        cursor: pointer;
+        transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+        position: relative;
+      }
+      .search_icon .icon_pc { display: block; }
+      .search_icon .icon_tab { display: none; }
+      .menu_btn:hover,
+      .search_icon:hover{
+        transform: translateY(-1px);
+        background: rgba(255,255,255,.12);
+        border-color: rgba(255,255,255,.28);
+        box-shadow:
+          0 14px 30px rgba(0,0,0,.45),
+          inset 0 1px 0 rgba(255,255,255,.18);
+      }
+      .menu_btn:active,
+      .search_icon:active{
+        transform: translateY(0) scale(.97);
+      }
+      .menu_btn:focus-visible,
+      .search_icon:focus-visible{
+        outline: none;
+        box-shadow:
+          0 14px 30px rgba(0,0,0,.45),
+          0 0 0 3px rgba(244,0,9,.35),
+          inset 0 1px 0 rgba(255,255,255,.18);
+      }
+      .menu_btn img,
+      .search_icon img{
+        width: 22px;    
+        height: auto;
+        display: block;
+        pointer-events: none;
+      }
+      .menu_btn.is-open,
+      #search_toggle:checked + .search_icon{
+        border-color: rgba(244,0,9,.55);
+        background: rgba(244,0,9,.10);
+      }
+      .menu_btn.is-open::before,
+      #search_toggle:checked + .search_icon::before{
+        content:"";
+        position:absolute;
+        inset:-9px;
+        border-radius: 999px;
+        animation: cokeRingPulse 3s ease-in-out infinite;
+        pointer-events:none;
+      }
+      .menu_layer_tablet,
+      .menu_dim {
+        display: none;
+      }
+      
+      .main {
+        display: block;
+        margin: auto;
+        width: 100%;
+        padding-bottom: 125px;
+        background-color: #1a1a1a;
+      }
+      .brand_bg img {
+        margin: auto;
+        width: 100%;
+      }
+      .quick_nav{
+        width: 100%;
+        background: #1a1a1a;
+        border-bottom: 1px solid rgba(255,255,255,.12);
+      }
+
+      .quick_nav_inner{
+        max-width: 1424px;
+        margin: 0 auto;
+        padding: 14px clamp(16px, 4vw, 64px);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(10px, 2vw, 16px);
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      .quick_nav_btn{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        padding: 0 16px;
+        border-radius: 999px;
+        color: #fff8f2;
+        font-weight: 900;
+        font-size: 14px;
+        letter-spacing: .2px;
+        background: rgba(255,255,255,.08);
+        border: 1px solid rgba(255,255,255,.18);
+        box-shadow:
+          0 10px 24px rgba(0,0,0,.35),
+          inset 0 1px 0 rgba(255,255,255,.14);
+        transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
+      }
+
+      .quick_nav_btn:hover,
+      .quick_nav_btn:focus-visible{
+        transform: translateY(-1px);
+        background: rgba(255,255,255,.12);
+        border-color: rgba(244,0,9,.45);
+        box-shadow:
+          0 14px 30px rgba(0,0,0,.45),
+          inset 0 1px 0 rgba(255,255,255,.18);
+      }
+
+      @media (max-width: 767px){
+        .quick_nav_btn{
+          height: 40px;
+          font-size: 13px;
+          padding: 0 14px;
+        }
+      }
+      .new_br {
+        margin-bottom: 50px;
+        padding: 0 2%;
+      }
+      .new_br h2 {
+        position: relative;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 62px;
+        margin-bottom: 50px;
+      }
+      .new_br h2::after {
+        content: "";
+        display: block;
+        width: 34px;
+        height: 1px;
+        background-color: #f40009;
+        margin: 18px auto 0;
+      }
+      .new_br::after {
+        content: "";
+        display: block;
+        width: 1190px;
+        height: 3px;
+        background-color: #e6e6e6;
+        margin: auto;
+      }
+      .new_wrap {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto 40px;
+        display: flex;
+        justify-content: center;
+        gap: clamp(15px, 10vw, 220px);
+        align-items: center;
+      }
+      .new_wrap img {
+        width: 249px;
+        height: auto;
+      }
+      .new_text {
+        width: 100%;
+        max-width: 610px;
+        color: #fff8f2;
+      }
+      .new_text h3 {
+        font-size: 50px;
+        margin-bottom: 40px;
+      }
+      .new_text .intro {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+      .new_text_wrap p {
+        color: #00e6d2;
+      }
+      .limited {
+        position: relative;
+        padding: 0 2%;
+      }
+      .limited h2 {
+        position: relative;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 62px;
+        margin-bottom: 50px;
+      }
+      .limited h2::after {
+        content: "";
+        display: block;
+        width: 34px;
+        height: 1px;
+        background-color: #f40009;
+        margin: 18px auto 84px;
+      }
+      .limited::after {
+        content: "";
+        display: block;
+        width: 1190px;
+        height: 3px;
+        background-color: #fff8f2;
+        margin: auto;
+      }
+      .limited_row {
+        position: relative;
+        width: 100%;
+        max-width: 1194px;
+        margin: 0 auto 150px;
+        padding: 0 2%;
+        box-sizing: border-box;
+      }
+      .limited_viewport {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 14px;
+        padding-bottom: 10px;
+      }
+      .limited_track {
+        display: flex;
+        will-change: transform;
+        transform: translate3d(0, 0, 0);
+      }
+      .limited_slide {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+      .limited_wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(20px, 6vw, 287px);
+      }
+      .limited_wrap .limited_drink {
+        width: var(--can-w);
+        height: var(--can-h);
+        object-fit: contain;
+        object-position: center bottom;
+        display: block;
+        flex: 0 0 auto;
+      }
+      .limited_text {
+        width: 100%;
+        max-width: 645px;
+      }
+      .limited_text img {
+        margin-bottom: 24px;
+      }
+      .limited_text .limited_logo {
+        width: var(--limited-logo-w);
+        height: var(--limited-logo-h);
+        display: block;
+        margin-bottom: 40px;
+        object-fit: contain;
+        object-position: left center;
+      }
+      .limited_text h3 {
+        font-size: 30px;
+        line-height: 1.2;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        margin-bottom: 22px;
+      }
+      .limited_text p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #00e6d2;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        margin-bottom: 0;
+      }
+      #limitedSlider {
+        position: relative;
+      }
+      #limitedSlider .btn_prev,
+      #limitedSlider .btn_next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 999;
+        padding: 6px;
+        user-select: none;
+      }
+      #limitedSlider .btn_prev {
+        left: 8px;
+      }
+      #limitedSlider .btn_next {
+        right: 8px;
+      }
+      #limitedSlider .btn_prev img,
+      #limitedSlider .btn_next img {
+        width: clamp(24px, 3vw, 44px);
+        height: auto;
+      }
+      #limitedSlider .limited_viewport {
+        cursor: grab;
+        touch-action: pan-y;
+      }
+
+      #limitedSlider .limited_viewport:active {
+        cursor: grabbing;
+      }
+
+      #limitedSlider .limited_track {
+        transition: transform 520ms cubic-bezier(.22,.61,.36,1);
+        will-change: transform;
+      }
+
+      #limitedSlider.is-dragging .limited_track {
+        transition: none;
+      }
+      .k-wave {
+        position: relative;
+      }
+      .k-wave h2 {
+        position: relative;
+        text-align: center;
+        font-size: 20px;
+        margin-top: 62px;
+        margin-bottom: 50px;
+      }
+      .k-wave h2::after {
+        content: "";
+        display: block;
+        width: 34px;
+        height: 1px;
+        background-color: #f40009;
+        margin: 18px auto 84px;
+      }
+      .k-wave_main {
+        width: 100%;
+        max-width: 1194px;
+        margin: auto;
+      }
+      .video_box {
+        position: relative;
+        width: 100%;
+        max-width: 1194px;
+        margin: 0 auto 40px;
+        aspect-ratio: 16 / 9;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #000;
+        isolation: isolate;
+      }
+      .video_iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .video_box .video_thumbnail {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .video_box .video_play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 26px;
+        border: 0;
+        cursor: pointer;
+        z-index: 5;
+      }
+      .k-wave_text1 {
+        text-align: center;
+      }
+      .k-wave_text1 h3 {
+        font-size: 50px;
+        margin-bottom: 30px;
+      }
+      .k-wave_text1 p {
+        font-size: 20px;
+        margin-bottom: 134px;
+      }
+      .k-wave_wrap {
+        width: 100%;
+        max-width: 1194px;
+        margin: 0 auto 173px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: clamp(40px, 8vw, 200px);
+        padding: 0 2%;
+        box-sizing: border-box;
+      }
+      .k-wave_wrap > img.kwave_can {
+        width: var(--can-w);
+        height: var(--can-h);
+        object-fit: contain;
+        object-position: center bottom;
+        flex: 0 0 auto;
+        max-width: none;
+      }
+      .k-wave_wrap > img:not(.kwave_can) {
+        width: 155px;
+        height: auto;
+        max-width: 100%;
+      }
+      .k-wave_text2 {
+        width: 100%;
+        max-width: 530px;
+      }
+      .k-wave_text2 > :last-child {
+        margin-bottom: 0;
+      }
+      .k-wave_text2 img {
+        width: clamp(160px, 18vw, 260px);
+        height: auto;
+        margin-bottom: 18px;
+        display: block;
+      }
+      .k-wave_text2 h3 {
+        font-size: 30px;
+        margin-bottom: 40px;
+      }
+      .k-wave_text2 p {
+        color: #00e6d2;
+      }
+      .k-wave_text2 p:last-of-type {
+        margin-bottom: 45px;
+      }
+      .k-wave_video {
+        width: 100%;
+        max-width: 1194px;
+        margin: 0 auto 40px;
+        padding: 0 2%;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .k-wave_video .kv_viewport {
+        width: 100%;
+        margin: 0 auto;
+        overflow: visible;
+      }
+      .k-wave_video .kv_track {
+        display: flex;
+        gap: 24px;
+      }
+      .k-wave_video .kv_card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .k-wave_video .kv_card > img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .k-wave_video .kv_iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 420px;
+        border: 0;
+      }
+      .k-wave_video .kv_text {
+        margin-top: 18px;
+        min-height: 200px;
+        padding: 0 5% 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .k-wave_video .kv_prev,
+      .k-wave_video .kv_next {
+        display: none;
+      }
+      .k-wave_video .kv_prev img,
+      .k-wave_video .kv_next img {
+        width: 44px;
+        height: auto;
+        display: block;
+      }
+      .k-wave_video .kv_text h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .k-wave_video .kv_text p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #00e6d2;
+      }
+      .k-wave_video .kv_play {
+        position: absolute;
+        left: 50%;
+        top: 210px;
+        transform: translate(-50%, -50%);
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        font-size: 26px;
+        border: 0;
+        cursor: pointer;
+        z-index: 7;
+      }
+    
+      .footer {
+        display: block;
+      }
+      .footer_tablet {
+        display: none;
+      }
+      .footer_bg {
+        width: 100%;
+        margin: auto;
+      }
+      .footer_wrap {
+        background-color: #1a1a1a;
+        width: 100%;
+        max-width: 1424px;
+        margin: auto;
+        padding: 0 2% 1% 2%;
+        box-sizing: border-box;
+        position: relative;
+        border: 0.1px solid #1a1a1a;
+        z-index: 10;
+      }
+      .footer_logo {
+        position: absolute;
+        top: 165px;
+        left: 2%;
+        padding-bottom: 5%;
+      }
+      .footer_logo img {
+        width: clamp(110px, 10vw, 220px);
+        height: auto;
+        display: block;
+      }
+      .site_guide ul {
+        display: flex;
+        width: 100%;
+        max-width: 600px;
+        justify-content: space-between;
+        margin: 4% auto 4%;
+      }
+      .site_guide ul li a {
+        color: #fff8f2;
+        font-size: clamp(14px, 1.2vw, 20px);
+      }
+      .policy_space {
+        height: 2px;
+        width: 100%;
+        margin: auto;
+        background-color: #e6e6e6;
+      }
+      .footer_text {
+        position: relative;
+        top: 140px;
+        width: 420px;
+      }
+      .footer_text p {
+        color: #fff8f2;
+      }
+      .footer_text span {
+        display: block;
+        margin-top: 60px;
+      }
+      .policy ul {
+        display: flex;
+        width: 208px;
+        margin: 120px auto 20px;
+        justify-content: space-between;
+      }
+      .policy ul li a {
+        color: #fff8f2;
+      }
+      .SNS {
+        position: absolute;
+        right: 2%;
+        bottom: 7%;
+      }
+      .SNS .sns_list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .SNS .sns_link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+      }
+      .SNS .sns_link img {
+        width: 35px;
+        height: auto;
+        display: block;
+      }
+      .SNS .sns_link:hover {
+        transform: translateY(-1px);
+      }
+      .footer_bear {
+        position: absolute;
+        right: 2%;
+        bottom: 140px;
+      }
+      .k-wave_text2 img {
+        width: 155px;
+        height: auto;
+        margin-bottom: 40px;
+        max-width: 100%;
+      }
+     
+      @media (max-width: 1400px) {
+        #limitedSlider .btn_prev {
+          left: 8px;
+        }
+        #limitedSlider .btn_next {
+          right: 8px;
+        }
+      }
+      @media (max-width: 1194px) {
+        .gnb,
+      .top_menu {
+        display: none;
+      }
+      .menu_btn{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        width: 52px;
+        height: 52px;
+        border-radius: 999px;
+        background: radial-gradient(120% 140% at 20% 10%,
+          rgba(255,255,255,.14),
+          rgba(255,255,255,.04) 55%,
+          rgba(0,0,0,.10) 100%);
+        border: 1px solid rgba(255,255,255,.16);
+        box-shadow:
+          0 12px 26px rgba(0,0,0,.45),
+          inset 0 1px 0 rgba(255,255,255,.14);
+        padding: 0;           
+        position: relative;    
+        cursor:pointer;
+        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .menu_btn::after{
+        content:"";
+        position:absolute;
+        inset: -6px;
+        border-radius: 999px;
+        opacity: .0;
+        transform: scale(.98);
+        transition: opacity .18s ease, transform .18s ease;
+        pointer-events:none;
+      }
+      .menu_btn:hover{
+        transform: translateY(-1px);
+        border-color: rgba(255,255,255,.28);
+        box-shadow:
+          0 16px 32px rgba(0,0,0,.55),
+          inset 0 1px 0 rgba(255,255,255,.18);
+      }
+      .menu_btn:hover::after{
+        opacity: 1;
+        transform: scale(1);
+      }
+      .menu_btn:active{
+        transform: translateY(0) scale(.96);
+        box-shadow:
+          0 8px 18px rgba(0,0,0,.45),
+          inset 0 1px 0 rgba(255,255,255,.12);
+      }
+      .menu_btn:focus-visible{
+        outline:none;
+        box-shadow:
+          0 16px 32px rgba(0,0,0,.55),
+          0 0 0 3px rgba(244,0,9,.35),
+          inset 0 1px 0 rgba(255,255,255,.18);
+      }
+      .menu_btn img{
+        height: auto;
+        display:block;
+        filter: drop-shadow(0 2px 6px rgba(0,0,0,.55));
+        opacity: .95;
+        transition: transform .18s ease, opacity .18s ease;
+      }
+      .menu_btn:hover img{ transform: translateY(-1px); opacity: 1; }
+      :root {
+        --tab-icon: clamp(32px, 5vw, 64px);
+      }
+      .search_icon .icon_pc { display: none; }
+      .search_icon .icon_tab { display: block; }
+      .menu_btn,
+      .search_icon {
+        width: 52px;
+        height: 52px;
+      }
+      .menu_btn img,
+      .search_icon img {
+        width: 22px;
+      }
+      .search_icon{
+        width: 56px;
+        height: 56px;
+      }
+      .search_icon img{
+        width: clamp(30px, 6.8vw, 44px);
+      }
+      .menu_layer_tablet {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 320px;
+          height: 100vh;
+          background: rgba(26, 26, 26, 0.9);
+          padding: 120px 24px 24px;
+          box-sizing: border-box;
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+          z-index: 10000;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 40px;
+        }
+
+        .menu_layer_tablet.active {
+          transform: translateX(0);
+        }
+
+        .menu_close {
+          position: absolute;
+          right: 24px;
+          top: 24px;
+          font-size: 28px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #fff8f2;
+        }
+
+        .menu_dim {
+          display: block;
+          position: fixed;
+          inset: 0;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s;
+          z-index: 9000;
+        }
+
+        .menu_dim.active {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        .menu_layer_tablet .depth1 > li {
+          margin-bottom: 18px;
+        }
+
+        .menu_layer_tablet .depth1_btn {
+          display: block;
+          color: #fff;
+          font-size: 20px;
+          padding: 12px 0;
+          font-weight: 800;
+        }
+
+        .tablet_util {
+          margin-top: 60px;
+          padding-top: 40px;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tablet_util .util_link {
+          display: block;
+          padding: 16px 0;
+          font-size: 16px;
+          font-weight: 800;
+          color: #fff8f2;
+        }
+
+        .tablet_util .util_link:hover {
+          color: #f40009;
+        }
+
+        .tablet_util2 {
+          margin-top: 40px;
+          padding-top: 40px;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tablet_util2 ul li {
+          margin-bottom: 16px;
+        }
+
+        .tablet_util2 ul li a {
+          display: block;
+          font-size: 16px;
+          font-weight: 800;
+          color: #fff8f2;
+        }
+
+        .tablet_util2 ul li a:hover {
+          color: #f40009;
+        }
+
+        .menu_layer_tablet .depth1_btn:hover,
+        .menu_layer_tablet .depth1_btn:focus-visible {
+          color: #f40009;
+        }
+
+      .intro_wrap {
+        display: block;
+        padding-bottom: 120px;
+      }
+      .logo img {
+        width: clamp(90px, 20vw, 130px);
+      }
+        .new_wrap {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+        }
+        .new_wrap > img {
+          width: clamp(110px, 32vw, 200px);
+          height: auto;
+          max-width: 100%;
+          margin: 0 auto;
+        }
+        .new_text {
+          max-width: 100%;
+        }
+        .new_text h3 {
+          font-size: clamp(22px, 4.2vw, 40px);
+          margin-bottom: 18px;
+        }
+        .new_text .intro {
+          font-size: clamp(14px, 2.4vw, 18px);
+          margin-bottom: 18px;
+        }
+        .new_text_wrap p {
+          font-size: clamp(13px, 2.1vw, 16px);
+          line-height: 1.7;
+        }
+        .limited_wrap {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 24px;
+          width: 100%;
+        }
+        #limitedSlider .btn_prev,
+        #limitedSlider .btn_next {
+          top: 35%;
+          transform: translateY(-50%);
+          z-index: 20;
+        }
+        .limited_wrap .limited_drink {
+          width: clamp(110px, 30vw, 180px);
+          height: clamp(200px, 34vw, 360px);
+        }
+        .limited_text {
+          width: 100%;
+          max-width: 545px;
+        }
+        .limited_text h3 {
+          font-size: clamp(16px, 3.6vw, 26px);
+          margin-bottom: 16px;
+        }
+        .limited_text p {
+          font-size: clamp(12px, 2.2vw, 15px);
+          line-height: 1.7;
+        }
+        :root {
+          --limited-logo-w: clamp(110px, 24vw, 160px);
+          --limited-logo-h: clamp(36px, 7vw, 52px);
+        }
+        .limited_text .limited_logo {
+          margin-bottom: 18px;
+        }
+
+        .k-wave_main {
+          min-width: 0;
+          padding: 0 2%;
+          box-sizing: border-box;
+        }
+        .k-wave_wrap > img.kwave_can {
+          width: clamp(110px, 30vw, 180px);
+          height: clamp(200px, 34vw, 360px);
+          margin: 0 auto;
+        }
+        .k-wave_text1 h3 {
+          font-size: clamp(22px, 4.2vw, 40px);
+          margin-bottom: 16px;
+        }
+        .k-wave_text1 p {
+          font-size: clamp(14px, 2.2vw, 18px);
+          margin-bottom: 70px;
+          line-height: 1.6;
+        }
+        .k-wave_wrap {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+        }
+        .k-wave_text2 {
+          max-width: 100%;
+        }
+        .k-wave_text2 img {
+          width: clamp(140px, 34vw, 220px);
+          margin-bottom: 16px;
+        }
+        .k-wave_text2 h3 {
+          font-size: clamp(18px, 3.6vw, 28px);
+          margin-bottom: 16px;
+        }
+        .k-wave_text2 p {
+          font-size: clamp(13px, 2.2vw, 16px);
+          line-height: 1.7;
+          margin-bottom: 0;
+        }
+        .k-wave_video .kv_viewport {
+          width: min(360px, 100%);
+          overflow: hidden;
+        }
+        .k-wave_video .kv_track {
+          gap: 0;
+          transition: transform 520ms ease;
+          will-change: transform;
+        }
+        .k-wave_video .kv_card {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        .k-wave_video .kv_prev,
+        .k-wave_video .kv_next {
+          display: block;
+          position: absolute;
+          top: 35%;
+          transform: translateY(-50%);
+          z-index: 20;
+          background: transparent;
+          border: 0;
+          padding: 8px;
+          cursor: pointer;
+        }
+        .k-wave_video .kv_prev {
+          left: 8px;
+        }
+        .k-wave_video .kv_next {
+          right: 8px;
+        }
+        .video_box {
+          max-width: 1194px;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          border-radius: 14px;
+        }
+
+        .k-wave_main {
+          padding: 0;
+        }
+
+        .video_box {
+          width: calc(100% - (var(--gutter) * 2));
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .footer {
+          display: none;
+        }
+        .footer_tablet {
+          display: block;
+        }
+        .header {
+          max-width: 1194px;
+          justify-content: space-between;
+          gap: 0;
+        }
+        .logo img {
+          width: clamp(90px, 20vw, 130px);
+        }
+        .search_form {
+          display: block;
+        }
+        .footer_tablet {
+          width: 100%;
+          position: relative;
+        }
+        .footer_bg_tablet {
+          width: 100%;
+          margin: 0 auto;
+        }
+        .footer_wrap_tablet {
+          display: none;
+        }
+        .footer_quickbar {
+          width: 100%;
+          max-width: 1194px;
+          margin: 0 auto 20px;
+          padding: 16px 2%;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.02)
+          );
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+        .footer_quickbtn {
+          flex: 1 1 0;
+          min-width: 0;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          background: radial-gradient(
+            120% 140% at 20% 10%,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.03) 55%,
+            rgba(0, 0, 0, 0.12) 100%
+          );
+          box-shadow:
+            0 10px 26px rgba(0, 0, 0, 0.35),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+          color: #fff8f2;
+          cursor: pointer;
+          transition:
+            transform 0.18s ease,
+            box-shadow 0.18s ease,
+            border-color 0.18s ease,
+            background 0.18s ease;
+        }
+        .footer_quickbtn:hover {
+          transform: translateY(-1px);
+          border-color: rgba(255, 255, 255, 0.28);
+          box-shadow:
+            0 14px 30px rgba(0, 0, 0, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.16);
+        }
+        .footer_quickbtn:active {
+          transform: translateY(0);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.28);
+        }
+        .footer_quickbtn.is-active {
+          border-color: rgba(244, 0, 9, 0.55);
+          background: rgba(244, 0, 9, 0.08);
+        }
+        .footer_quicklabel {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          font-size: 14px;
+          letter-spacing: 0.2px;
+          line-height: 1;
+          white-space: nowrap;
+          position: relative;
+          padding-left: 14px;
+          color: #fff8f2;
+          transition:
+            color 0.18s ease,
+            letter-spacing 0.18s ease;
+        }
+        .footer_quickbtn:hover .footer_quicklabel {
+          color: #ffffff;
+          letter-spacing: 0.3px;
+        }
+        .footer_quickbtn.is-active .footer_quicklabel {
+          color: #ffdede;
+        }
+        .footer_quicklabel::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          border-radius: 999px;
+          background: #f40009;
+          transition: transform 0.18s ease;
+        }
+        .footer_quickbtn:hover .footer_quicklabel::before {
+          transform: translateY(-50%) translateX(3px);
+        }
+        .footer_panel {
+          width: 100%;
+          max-width: 1194px;
+          margin: 0 auto;
+          padding: 0 2% 20px;
+          box-sizing: border-box;
+        }
+        .panel_box {
+          border-radius: 18px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+          background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.07),
+            rgba(255, 255, 255, 0.03)
+          );
+          box-shadow:
+            0 14px 34px rgba(0, 0, 0, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+          padding: 16px;
+        }
+        .panel_list li {
+          margin: 0;
+        }
+        .panel_list a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 12px;
+          border-radius: 14px;
+          color: #fff8f2;
+          letter-spacing: 0.2px;
+          background: rgba(0, 0, 0, 0.18);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          transition:
+            transform 0.18s ease,
+            border-color 0.18s ease,
+            background 0.18s ease;
+        }
+        .panel_list a::after {
+          content: "›";
+          font-size: 18px;
+          opacity: 0.7;
+          transform: translateX(0);
+          transition:
+            transform 0.18s ease,
+            opacity 0.18s ease;
+        }
+        .panel_list a:hover {
+          transform: translateY(-1px);
+          border-color: rgba(244, 0, 9, 0.45);
+          background: rgba(244, 0, 9, 0.1);
+        }
+        .panel_list a:hover::after {
+          transform: translateX(2px);
+          opacity: 1;
+        }
+        .panel_box[data-panel-box="sns"] .panel_list a {
+          font-weight: 700;
+          letter-spacing: 0.3px;
+        }
+        .panel_box[data-panel-box="sns"] .sns_panel {
+          display: flex;
+          gap: 100px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .panel_box[data-panel-box="sns"] .sns_imglink {
+          display: block;
+          width: clamp(52px, 10vw, 80px);
+          overflow: hidden;
+          transition:
+            transform 0.18s ease,
+            border-color 0.18s ease;
+        }
+        .panel_box[data-panel-box="sns"] .sns_imglink:hover {
+          transform: translateY(-1px);
+        }
+        .panel_box[data-panel-box="sns"] .sns_imglink img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .footer_tablet .footer_bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        .footer_tablet .footer_logo_tablet {
+          margin-top: clamp(24px, 5vw, 60px);
+        }
+        .footer_logo_tablet img {
+          display: block;
+          width: clamp(140px, 14vw, 313px);
+          margin: 0 auto;
+          height: auto;
+        }
+        .footer_text_tablet {
+          color: #fff8fe;
+          text-align: center;
+          font-size: clamp(12px, 2.2vw, 15px);
+          line-height: 1.6;
+          margin-top: 26px;
+          padding-bottom: 36px;
+        }
+        .footer_text_tablet span {
+          display: block;
+          margin-top: 12px;
+          font-size: clamp(11px, 2vw, 13px);
+        }
+        :root {
+          --limited-logo-w: clamp(110px, 55vw, 200px);
+          --limited-logo-h: clamp(34px, 10vw, 52px);
+        }
+        .limited_text .limited_logo {
+          margin-bottom: 16px;
+        }
+        .k-wave_text2 img {
+          width: clamp(110px, 24vw, 160px);
+          margin-bottom: 18px;
+        }
+      }
+      @media (max-width: 767px) {
+        .logo {
+        margin-top: 13px;
+      }
+      .menu_btn,
+      .search_icon {
+        width: 52px;
+        height: 52px;
+      }
+      .menu_btn img,
+      .search_icon img {
+        width: 22px;
+      }
+      .search_icon{
+        width: 56px;
+        height: 56px;
+      }
+      .search_icon img{
+        width: clamp(30px, 6.8vw, 44px);
+      }
+      .logo img {
+        width: clamp(76px, 26vw, 110px);
+      }
+        .new_wrap > img {
+          width: clamp(100px, 50vw, 170px);
+        }
+        .k-wave_text1 h3 {
+          font-size: clamp(20px, 6vw, 28px);
+          line-height: 1.25;
+        }
+        .k-wave_text1 p {
+          font-size: clamp(13px, 4vw, 16px);
+          margin-bottom: 50px;
+          text-align: left;
+        }
+        .k-wave_wrap > img.kwave_can {
+          width: clamp(80px, 38vw, 130px);
+          height: clamp(170px, 60vw, 300px);
+          object-fit: contain;
+          object-position: center bottom;
+          margin: 0 auto 16px;
+        }
+        .k-wave_text2 img {
+          width: clamp(130px, 55vw, 200px);
+        }
+        .limited_wrap .limited_drink {
+          width: clamp(80px, 38vw, 130px);
+          height: clamp(170px, 60vw, 300px);
+          margin-bottom: 16px;
+        }
+        .limited_text img {
+          margin-bottom: 16px;
+        }
+        .limited_text h3 {
+          font-size: clamp(16px, 5vw, 20px);
+          line-height: 1.25;
+          margin-bottom: 14px;
+        }
+        .limited_text p {
+          font-size: clamp(12px, 3.8vw, 14px);
+          line-height: 1.8;
+        }
+        .limited_slide .limited_wrap {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+          justify-items: center;
+          gap: 16px;
+        }
+        .limited_slide .limited_wrap .limited_drink {
+          grid-row: 1;
+        }
+        .limited_slide .limited_wrap .limited_text {
+          grid-row: 2;
+          width: 100%;
+          min-width: 0;
+        }
+        #limitedSlider {
+          position: relative;
+        }
+        #limitedSlider .limited_viewport {
+          padding-top: 0;
+          padding-bottom: 0;
+          overflow: hidden;
+        }
+        #limitedSlider .limited_track {
+          gap: 0 
+        }
+        #limitedSlider .limited_slide {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+        #limitedSlider .limited_text h3 {
+          word-break: break-word;
+          overflow-wrap: anywhere;
+        }
+        #limitedSlider .limited_wrap {
+          padding: 0 var(--gutter);
+          box-sizing: border-box;
+          width: 100%;
+        }
+        #limitedSlider .btn_prev,
+        #limitedSlider .btn_next {
+          top: calc(clamp(170px, 60vw, 300px) / 2);
+          transform: translateY(-50%);
+          padding: 6px;
+        }
+        #limitedSlider .btn_prev {
+          left: 8px;
+        }
+        #limitedSlider .btn_next {
+          right: 8px;
+        }
+        #limitedSlider .btn_prev img,
+        #limitedSlider .btn_next img {
+          width: 26px;
+          height: auto;
+          display: block;
+        }
+        main {
+          padding-left: var(--gutter);
+          padding-right: var(--gutter);
+          box-sizing: border-box;
+        }
+        .main_wrap1_bg,
+        .brand_bg,
+        .section_bg {
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .main_wrap1,
+        .brand_wrap,
+        .brand_container,
+        .content_wrap,
+        .section_inner {
+          padding-left: var(--gutter);
+          padding-right: var(--gutter);
+          box-sizing: border-box;
+        }
+        .brand_hero,
+        .brand_main_visual,
+        .brand_bg img {
+          margin-left: calc(var(--gutter) * -1);
+          margin-right: calc(var(--gutter) * -1);
+          width: calc(100% + (var(--gutter) * 2));
+          max-width: none;
+        }
+        .new_br::after,
+        .limited::after {
+          width: 100vw;
+          max-width: none;
+          margin-left: calc(50% - 50vw);
+        }
+        .panel_box[data-panel-box="sns"] .sns_panel {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+          gap: clamp(12px, 5vw, 22px);
+        }
+        .panel_box[data-panel-box="sns"] .sns_imglink {
+          width: clamp(44px, 14vw, 64px);
+          flex: 0 0 auto;
+        }
+        .panel_box[data-panel-box="sns"] .sns_imglink img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .k-wave_text2 .limited_logo {
+          width: clamp(90px, 42vw, 150px);
+          height: auto;
+        }
+        .k-wave_video {
+          margin-bottom: 40px;
+        }
+      }
+      body{
+        font-size: 15px;
+        line-height: 1.5;
+      }
+      .new_br > h2,
+      .limited > h2,
+      .k-wave > h2{
+        font-size: clamp(16px, 1.6vw, 24px);
+        line-height: 1.2;
+        font-weight: 800;
+      }
+      .new_text > h3,
+      .k-wave_text1 > h3{
+        font-size: clamp(28px, 5vw, 50px);
+        font-weight: 800;
+        line-height: 1.15;
+      }
+      .limited_text > h3,
+      .k-wave_text2 > h3{
+        font-size: clamp(22px, 3vw, 36px);
+        font-weight: 800;
+        line-height: 1.2;
+      }
+      .k-wave_video .kv_text > h3{
+        font-size: clamp(16px, 1.6vw, 18px);
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .new_text_wrap p,
+      .limited_text > p,
+      .k-wave_text1 > p,
+      .k-wave_text2 > p,
+      .k-wave_video .kv_text p{
+        font-size: clamp(13px, 2.2vw, 17px);
+        font-weight: 400;
+        line-height: 1.7;
+      }
+      .new_text .intro{
+        font-size: clamp(14px, 2.4vw, 20px);
+        font-weight: 700;
+        line-height: 1.6;
+      }
+      @media (max-width: 1194px){
+        .new_br > h2,
+        .limited > h2,
+        .k-wave > h2{
+          font-size: clamp(14px, 2.0vw, 18px);
+          font-weight: 800;
+        }
+        .new_text > h3,
+        .k-wave_text1 > h3{
+          font-size: clamp(28px, 4vw, 50px);
+          font-weight: 800;
+        }
+        .limited_text > h3,
+        .k-wave_text2 > h3{
+          font-size: clamp(18px, 3.6vw, 28px);
+          font-weight: 800;
+        }
+        .new_text_wrap p,
+        .limited_text > p,
+        .k-wave_text1 > p,
+        .k-wave_text2 > p,
+        .k-wave_video .kv_text p{
+          font-size: clamp(13px, 2.1vw, 16px);
+          line-height: 1.7;
+        }
+        .new_text .intro{
+          font-size: clamp(14px, 2.4vw, 18px);
+          font-weight: 700;
+        }
+      }
+        @media (max-width: 767px){
+          .new_br > h2,
+          .limited > h2,
+          .k-wave > h2{
+            font-size: clamp(13px, 4.0vw, 17px);
+          }
+          .k-wave_text1 > h3{
+            font-size: clamp(20px, 6vw, 28px);
+            font-weight: 800;
+            line-height: 1.25;
+          }
+          .new_text > h3{
+            font-size: clamp(20px, 6vw, 28px);
+            font-weight: 800;
+            line-height: 1.25;
+          }
+          .limited_text > h3{
+            font-size: clamp(16px, 5vw, 20px);
+            font-weight: 800;
+            line-height: 1.25;
+          }
+          .k-wave_text2 > h3{
+            font-size: clamp(16px, 5vw, 20px);
+            font-weight: 800;
+            line-height: 1.25;
+          }
+          .new_text_wrap p,
+          .k-wave_text1 > p{
+            font-size: clamp(13px, 4vw, 16px);
+            line-height: 1.75;
+          }
+          .limited_text > p,
+          .k-wave_text2 > p,
+          .k-wave_video .kv_text p{
+            font-size: clamp(12px, 3.8vw, 14px);
+            line-height: 1.8;
+            font-weight: 600;
+          }
+          .new_text .intro{
+            font-size: clamp(16px, 5vw, 20px);
+            font-weight: 800;
+            line-height: 1.25;
+          }
+          .k-wave_video .kv_text > h3{
+            font-size: clamp(14px, 3.8vw, 16px);
+            font-weight: 700;
+          }
+        }
+        #kwaveSlider .kv_prev,
+        #kwaveSlider .kv_next{
+          padding: 6px;
+        }
+
+        #kwaveSlider .kv_prev img,
+        #kwaveSlider .kv_next img{
+          width: clamp(24px, 3vw, 44px);
+          height: auto;
+          display: block;
+        }
+        @media (max-width: 1194px) {
+          #kwaveSlider .kv_card > img,
+          #kwaveSlider .kv_card > iframe,
+          #kwaveSlider .kv_card .kv_play {
+            touch-action: pan-x;
+          }
+
+          #kwaveSlider .kv_text {
+            touch-action: pan-y;
+          }
+        }
+        .brand_hero{
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .brand_bg img{
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .hero_media{
+          position: relative;
+          width: 100%;
+        }
+        .hero_text{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          max-width: min(860px, 90vw);
+          width: 100%;
+          text-align: center;
+          z-index: 10;
+          pointer-events: none;
+        }
+        .brand_hero{
+          position: relative;
+        }
+        .brand_hero .brand_bg picture,
+        .brand_hero .brand_bg img{
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .hero_title{
+          font-size: clamp(42px, 5.8vw, 86px);
+          font-weight: 700;
+          line-height: 1.05;
+          color: #fff8f2;
+          text-shadow: 0 6px 18px rgba(0,0,0,.55);
+        }
+        .hero_title,
+        .hero_desc{
+          font-family: "Poppins", "SUIT", "나눔고딕", sans-serif;
+        }
+        .hero_desc{
+          font-size: clamp(16px, 2.4vw, 24px);
+          font-weight: 700;
+          margin-top: clamp(12px, 1.4vw, 18px);
+          color: #fff8f2;
+          text-shadow: 0 6px 18px rgba(0,0,0,.55);
+        }
+        @media (prefers-reduced-motion: reduce){
+          .hero_text_inner{
+            transition: none;
+            opacity: 1;
+            transform: none;
+          }
+        }
+        @media (max-width: 767px) {
+          #limitedSlider .limited_viewport {
+            touch-action: pan-y;
+          }
+          .brand_hero {
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          margin: 0;
+          max-width: none;
+          overflow: hidden;
+        }
+
+        .brand_hero .brand_bg,
+        .brand_hero .brand_bg picture,
+        .brand_hero .brand_bg img {
+          width: 100%;
+          max-width: none;
+          margin-left: 0;
+          margin-right: 0;
+          display: block;
+        }
+        .brand_hero .hero_desc{
+          font-size: clamp(13px, 3.6vw, 16px);
+          font-weight: 700;
+          margin-top: clamp(12px, 1.4vw, 18px);
+          color: #fff8f2;
+          text-shadow: 0 6px 18px rgba(0,0,0,.55);
+        }
+        .logo {
+          transform: translateX(8px);
+        }
+        .search_icon {
+          transform: translateX(8px);
+        }
+
+        .search_icon:hover {
+          transform: translateX(8px) translateY(-1px);
+        }
+
+        .search_icon:active {
+          transform: translateX(8px) scale(.97);
+        }
+        }
+        .hero_text_inner{
+          will-change: transform, opacity;
+        }
+
+        .hero_text_inner[data-aos="fade-up"]{
+          transform: translate3d(0, 32px, 0);
+          opacity: 0;
+          transition-property: transform, opacity;
+          transition-duration: 1800ms;
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-delay: 150ms;
+        }
+
+        .hero_text_inner[data-aos="fade-up"].aos-animate{
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+
+        }
+         .top_btn{
+            position: fixed;
+            right: clamp(14px, 2.6vw, 24px);
+            bottom: clamp(18px, 3.2vw, 28px);
+            width: 54px;
+            height: 54px;
+            border-radius: 999px;
+            border: 1px solid rgba(255,255,255,.18);
+            background: rgba(26,26,26,.72);
+            box-shadow:
+              0 14px 34px rgba(0,0,0,.45),
+              inset 0 1px 0 rgba(255,255,255,.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #fff8f2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 900;
+            cursor: pointer;
+            z-index: 12000;
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity .2s ease, transform .2s ease, visibility .2s ease, border-color .2s ease, background .2s ease;
+          }
+
+          .top_btn.is-show{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+
+          .top_btn:hover{
+            transform: translateY(-1px);
+            background: rgba(26,26,26,.82);
+            border-color: rgba(244,0,9,.45);
+          }
+
+          .top_btn:active{
+            transform: translateY(0) scale(.97);
+          }
+
+          .top_btn:focus-visible{
+            outline: none;
+            box-shadow:
+              0 14px 34px rgba(0,0,0,.45),
+              0 0 0 3px rgba(244,0,9,.35),
+              inset 0 1px 0 rgba(255,255,255,.12);
+          }
+
+          @media (max-width: 767px){
+            .top_btn{
+              width: 52px;
+              height: 52px;
+              font-size: 20px;
+              right: 16px;
+              bottom: 18px;
+            }
+          }
+    </style>
+  </head>
+  <body>
+    <div class="skip_menu">
+      <a href="#gnb">주요메뉴 바로가기</a>
+      <a href="#brand">브랜드 바로가기</a>
+      <a href="#limited">코카콜라 한정판 제품 바로가기</a>
+      <a href="#sustainability">지속 가능성 바로가기</a>
+      <a href="#news_event_section">뉴스 및 이벤트 바로가기</a>
+      <a href="#footer">하단메뉴 바로가기</a>
+    </div>
+    <div class="header_wrap">
+      <header id="header" class="header header--solid">
+        <button type="button" class="menu_btn" aria-label="메뉴 열기">
+          <img src="images/header_btn.png" alt="" >
+        </button>
+        <h1 class="logo">
+          <a href="index.html" class="logo_link">
+            <img
+              src="images/cocacola_logo.png"
+              alt="코카콜라 로고"
+              class="logo_default"
+            >
+            <img
+              src="images/cocacola_logo_hover.png"
+              alt=""
+              class="logo_hover"
+              aria-hidden="true"
+            >
+          </a>
+        </h1>
+        <nav id="gnb" class="gnb">
+          <h2 class="hide">주요 메뉴</h2>
+          <ul class="depth1">
+            <li><a href="company.html">Company</a></li>
+            <li><a href="brand.html">Brand</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contents.html">Contents</a></li>
+            <li><a href="goods.html.html">Goods</a></li>
+          </ul>
+        </nav>
+        <div class="top_menu">
+          <h2 class="hide">유틸 메뉴</h2>
+          <ul>
+            <li><a href="#none">•한국어</a></li>
+            <li>
+              <a href="login.html">•LOGIN</a>
+            </li>
+            <li><a href="join.html">•JOIN</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <input type="checkbox" id="search_toggle" class="hide" >
+          <label for="search_toggle" class="search_icon">
+            <img src="images/search.png" alt="검색" class="icon_pc" >
+            <img
+              src="images/tablet_search.png"
+              alt="검색"
+              class="icon_tab"
+            >
+          </label>
+          <form class="search_form" id="searchForm">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+          </form>
+        </div>
+      </header>
+    </div>
+    <nav class="menu_layer_tablet">
+      <button type="button" class="menu_close" aria-label="메뉴 닫기">✕</button>
+      <ul class="depth1">
+        <li><a href="company.html" class="depth1_btn">Company</a></li>
+        <li><a href="brand.html" class="depth1_btn">Brand</a></li>
+        <li><a href="sustainability.html" class="depth1_btn">Sustainability</a></li>
+        <li><a href="contents.html" class="depth1_btn">Contents</a></li>
+        <li><a href="goods.html" class="depth1_btn">Goods</a></li>
+      </ul>
+      <div class="tablet_util">
+        <a href="login.html" class="util_link">LOGIN</a>
+        <a href="join.html" class="util_link">JOIN</a>
+      </div>
+      <div class="tablet_util2">
+        <ul>
+          <li><a href="faq.html">• FAQ</a></li>
+          <li><a href="customer.html">• 고객안내</a></li>
+          <li><a href="contact.html">• 문의하기</a></li>
+          <li><a href="notice.html">• 공지사항</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu_dim"></div>
+    <main id="main" class="main">
+
+      <section class="brand_hero">
+        <div class="hero_media">
+          <div class="brand_bg">
+            <picture>
+              <source media="(max-width: 1194px)" srcset="images/brand_bg_mobile.png">
+              <img src="images/brand_bg.png" alt="brand 메인 배너">
+            </picture>
+          </div>
+
+          <div class="hero_text" aria-hidden="false">
+            <div class="hero_text_inner"
+              data-aos="fade-up"
+              data-aos-duration="1800"
+              data-aos-delay="150"
+              data-aos-easing="ease-out-cubic">
+              <h2 class="hero_title">brand</h2>
+              <p class="hero_desc">“코카-콜라의 브랜드가 전하는 특별한 감성을 느껴보세요.”</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="quick_nav" aria-label="Brand 섹션 바로가기">
+          <div class="quick_nav_inner">
+            <a class="quick_nav_btn" href="#new">신제품</a>
+            <a class="quick_nav_btn" href="#limited">한정판</a>
+            <a class="quick_nav_btn" href="#k-wave">한류</a>
+          </div>
+        </section>
+      </section>
+
+      <section class="new_br" id="new">
+        <h2>신제품</h2>
+        <div class="new_wrap">
+          <img
+            src="images/cola_lol.png"
+            alt="코카콜라 제로 레전드 이미지"
+          >
+          <div class="new_text">
+            <h3>코카-콜라 X 리그 오브 레전드, 코카-콜라 제로 레전드</h3>
+            <p class="intro">
+              짜릿한 경험치(+XP)의 맛을 담다.<br >
+              새로운 전설이 될 코카-콜라 제로 레전드 키트의 봉인을 해제하라!
+            </p>
+            <div class="new_text_wrap">
+              <p>
+                게임 입문자에게는 튜토리얼을 익히는 데 도움을, 숙련자에게는
+                캐릭터를 성장 시키는 데 필요한 경험치를 주는 게임 속 퀘스트! 한
+                가지 분명한 건 퀘스트를 깼을 때의 짜릿함은 겪어본 자만이 안다는
+                것. 난이도가 높을수록 퀘스트를 완료해낸 기분은 더욱 짜릿하다. 이
+                짜릿함을 맛으로 표현하면 어떨까? 미션 완료 후 다음 스테이지로
+                넘어가는 로딩 화면을 볼 때처럼 오감을 자극하지 않을까.
+                코카-콜라는 최근 게임에서 획득하는 경험치의 맛을 즐길 수 있는
+                코카-콜라 제로 레전드를 출시했다. 코카-콜라 제로 레전드의
+                경험치(+XP) 맛을 통해 게임 속에서 얻을 수 있었던 짜릿함을 맛볼
+                수 있는 것이다. 그뿐만이 아니다. 수많은 게이머들을 들뜨게 할
+                스페셜한 선물과 함께 코카-콜라 크리에이션 레전드 키트까지
+                한정판으로 제작했다는데?! 전설적인 짜릿함을 전하는 ‘코카-콜라
+                제로 레전드’ 퀘스트를 완수 자에게 전해지는 코카-콜라 크리에이션
+                레전드 키트! 코카-콜라 크리에이션 레전드 키트의 봉인을 해제할
+                새로운 퀘스트를 수락하시겠습니까? (Y/N)
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="limited" id="limited">
+        <h2>한정판</h2>
+        <div class="limited_row" id="limitedSlider">
+          <a href="#none" class="btn_prev" aria-label="이전">
+            <img src="images/arrow_prev.png" alt="이전" >
+          </a>
+          <div class="limited_viewport">
+            <div class="limited_track">
+              <div class="limited_slide">
+                <div class="limited_wrap">
+                  <img
+                    class="limited_drink oreo"
+                    src="images/cola_oreo.png"
+                    alt="코카콜라 제로 오레오 이미지"
+                  >
+                  <div class="limited_text">
+                    <img
+                      class="oreo_logo limited_logo"
+                      src="images/cocacola_oreo_logo.png"
+                      alt="코카콜라 제로 오레오 로고"
+                    >
+                    <h3>Coca-Cola® Zero Sugar OREO™ Limited Edition</h3>
+                    <p>
+                      코카콜라® 제로 슈거 오레오 리미티드 에디션 크리에이션®은
+                      한 모금 한 모금마다 우정을 기념하는 맛있는 듀오입니다.
+                      코카콜라® 제로 슈거와 오레오의 장점을 결합하여, 다채로운
+                      맛을 지닌 새로운 친구를 찾을 수 있도록 도와드립니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="limited_slide">
+                <div class="limited_wrap">
+                  <img
+                    class="limited_drink starlight"
+                    src="images/cola_starlight.png"
+                    alt="코카콜라 스타라이트 이미지"
+                  >
+                  <div class="limited_text">
+                    <img
+                      class="starlight_logo limited_logo"
+                      src="images/cocacola_starlight_logo.png"
+                      alt="코카콜라 스타라이트 로고"
+                    >
+                    <h3>Coca-Cola® Starlight</h3>
+                    <p>
+                      코카콜라 크리에이션즈의 첫 번째 한정판 탄산음료, 코카콜라
+                      스타라이트를 소개합니다. 붉은빛을 띠는 스타라이트 음료와
+                      새롭지만 친숙한 코카콜라의 풍미를 즐기며 은은한 시원함을
+                      느껴보세요. 코카콜라 스타라이트와 함께 새로운 세상에서
+                      무한한 가능성을 발견해 보세요. 한정 판매되니 서두르세요.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="limited_slide">
+                <div class="limited_wrap">
+                  <img
+                    class="limited_drink tears"
+                    src="images/cola_tears.png"
+                    alt="코카콜라 티어스 이미지"
+                  >
+                  <div class="limited_text">
+                    <img
+                      class="tears_logo limited_logo"
+                      src="images/cocacola_tears_logo.png"
+                      alt="코카콜라 티어스 로고"
+                    >
+                    <h3>Coca-Cola® Happy Tears Zero Sugar</h3>
+                    <p>
+                      코카콜라 해피 티어즈 제로 슈거를 소개합니다.
+                      #행복한눈물의맛 과 선행을 나누는 행복한 순간의 진정한
+                      마법을 담아낸 코카콜라의 최신 제품입니다. 한정 수량으로
+                      무한한 행복을 선사합니다. 틱톡 샵에서만 만나보실 수
+                      있습니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="limited_slide">
+                <div class="limited_wrap">
+                  <img
+                    class="limited_drink Y3000"
+                    src="images/cola_y3000.png"
+                    alt="코카콜라 Y3000 이미지"
+                  >
+                  <div class="limited_text">
+                    <img
+                      class="y3000_logo limited_logo"
+                      src="images/cocacola_y3000_logo.png"
+                      alt="코카콜라 Y3000 로고"
+                    >
+                    <h3>Coca-Cola® Y3000</h3>
+                    <p>
+                      코카콜라 크리에이션즈에서 새롭게 선보이는 코카콜라
+                      Y3000으로 3000년의 미래를 엿보세요. 미래에서 온 최초의
+                      한정판 코카콜라 플레이버입니다. 인류와 기술이 그 어느
+                      때보다 긴밀하게 연결된 다가올 미래에 대한 낙관적인 비전을
+                      보여주기 위해 탄생했습니다. 코카콜라 Y3000은 인공지능과
+                      협력하여 개발되었으며, 미래의 맛을 코카콜라 팬들에게
+                      선사합니다. 지금 바로 미래의 맛을 경험해 보세요. 코카콜라
+                      Y3000은 한정 기간 동안만 판매됩니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="limited_slide">
+                <div class="limited_wrap">
+                  <img
+                    class="limited_drink ultimate"
+                    src="images/cola_ultimate.png"
+                    alt="코카콜라 제로 슈거 얼티밋 이미지"
+                  >
+                  <div class="limited_text">
+                    <img
+                      class="ultimate_logo limited_logo"
+                      src="images/cocacola_ultimate_logo.png"
+                      alt="코카콜라 제로 슈거 얼티밋 로고"
+                    >
+                    <h3>Coca-Cola® Zero Sugar Ultimate</h3>
+                    <p>
+                      코카콜라 크리에이션즈의 최신 탄산음료, 코카콜라 제로 슈거
+                      얼티밋을 경험해 보세요. 코카콜라 크리에이션즈와 리그 오브
+                      레전드가 만나 코카콜라 제로 슈거 얼티밋의 +XP 맛을
+                      선보입니다. 라이엇 게임즈와 공동 개발한 이 한정판 맛은
+                      기존 코카콜라 제로 슈거의 맛에 +XP의 짜릿한 맛을
+                      더했습니다. 게임을 하든 경기를 시청하든, 시원한 코카콜라
+                      제로 슈거 얼티밋으로 당신의 팬심을 표현해 보세요.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#none" class="btn_next" aria-label="다음">
+            <img src="images/arrow_next.png" alt="다음" >
+          </a>
+        </div>
+      </section>
+      <section class="k-wave" id="k-wave">
+        <h2>한류</h2>
+        <div class="k-wave_main">
+          <div class="video_box" id="kwaveVideo">
+            <img
+              src="images/k-wave_video1.png"
+              alt="한류 메인 비디오"
+              class="video_thumbnail"
+            >
+            <button type="button" class="video_play" aria-label="영상 재생">
+              ▶
+            </button>
+          </div>
+          <div class="k-wave_text1">
+            <h3>
+              전 세계 한류 팬들을 위한 한정판,<br >
+              코카-콜라 제로 한류(K-Wave)
+            </h3>
+            <p>
+              K-POP을 테마로 한 새로운 코카-콜라의 탄생. 전 세계 K-POP 팬들의
+              무한한 사랑과 열정을 담다.
+            </p>
+          </div>
+        </div>
+        <div class="k-wave_wrap">
+          <img
+            class="limited_drink kwave_can"
+            src="images/cola_k-wave.png"
+            alt="코카콜라 k-wave 이미지"
+          >
+          <div class="k-wave_text2">
+            <img
+              class="limited_logo"
+              src="images/cola_k-wave_logo.png"
+              alt=" 코카콜라 k-wave 로고"
+            >
+            <h3>Coca-Cola® K-Wave Zero Sugar</h3>
+            <p>
+              K-Wave는 클래식 코카콜라의 맛에 과일 향과 K-Pop의 마법을
+              더했습니다. 좋아하는 K-Pop 밴드의 세계적인 매력과 전 세계인의
+              열광을 상상해 보세요. 이 모든 것이 새로운 코카콜라 크리에이션
+              드롭에 담겨 있습니다. 전 세계 어디에 있든 모든 언어로 번역되는
+              혁신적인 액상 음료입니다. 단, 한정 기간 동안만 판매 되며, 공식
+              코카콜라 스토어에서만 만나보실 수 있습니다.
+            </p>
+          </div>
+        </div>
+        <div class="k-wave_video" id="kwaveSlider">
+          <button type="button" class="kv_prev" aria-label="이전 카드">
+            <img src="images/arrow_prev.png" alt="이전" >
+          </button>
+          <button type="button" class="kv_next" aria-label="다음 카드">
+            <img src="images/arrow_next.png" alt="다음" >
+          </button>
+          <div class="kv_viewport">
+            <div class="kv_track">
+              <div class="kv_card" data-yt="z_V2xLnGdBg">
+                <img src="images/k-wave_video2.png" alt="한류 비디오1" >
+                <div class="kv_text">
+                  <h3>우리와 함께 K-Wave의 세계로 빠져 봐!</h3>
+                  <p>#StrayKids #ITZY #NMIXX 가 함께한</p>
+                  <p>코카-콜라 제로 한류 인터뷰를 공개합니다!</p>
+                </div>
+              </div>
+              <div class="kv_card" data-yt="osQmS4wr7aw">
+                <img src="images/k-wave_video3.png" alt="한류 비디오2" >
+                <div class="kv_text">
+                  <h3>'LIKE MAGIC' 댄스 챌린지!</h3>
+                  <p>Jump! Jump In! 지금 댄스 챌린지에 도전하고</p>
+                  <p>Stray Kids, ITZY, NMIXX와 함께 K-Wave</p>
+                  <p>세계로 빠져보세요.</p>
+                </div>
+              </div>
+              <div class="kv_card" data-yt="hfTs75t0AXQ">
+                <img src="images/k-wave_video4.png" alt="한류 비디오3" >
+                <div class="kv_text">
+                  <h3>혜택이 넘치는 한류 CUBE 이벤트</h3>
+                  <p>K-Wave 콘서트 인기가요 티켓 응모권부터 할인</p>
+                  <p>쿠폰까지. 3월 1일부터 진행되는 한류 CUBE</p>
+                  <p>이벤트에 참여해 보세요.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button type="button" class="top_btn" aria-label="맨 위로 이동">
+      <span aria-hidden="true">↑</span>
+    </button>
+    <footer id="footer" class="footer">
+      <img
+        src="images/footer_bg.png"
+        alt="푸터 배너 이미지"
+        class="footer_bg"
+      >
+      <div class="footer_wrap">
+        <h2 class="footer_logo">
+          <img src="images/footer_logo.png" alt="푸터 로고" >
+        </h2>
+        <nav class="site_guide">
+          <h2 class="hide">사이트 이용안내</h2>
+          <ul>
+            <li><a href="faq.html">• FAQ</a></li>
+            <li><a href="customer.html">• 고객안내</a></li>
+            <li><a href="contact.html">• 문의하기</a></li>
+            <li><a href="notice.html">• 공지사항</a></li>
+          </ul>
+        </nav>
+        <div class="policy_space"></div>
+        <div class="footer_text">
+          <p>
+            코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 페이지입니다.
+            <br >코카콜라를 통해 브랜드의 에너지와 즐거움을 느껴보세요.
+          </p>
+          <p><span>©2025 코카콜라. All rights reserved.</span></p>
+        </div>
+        <nav class="policy">
+          <ul>
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="cocacola_privacy.html">개인정보처리방침</a></li>
+          </ul>
+        </nav>
+        <nav class="SNS" aria-label="SNS 바로가기">
+          <ul class="sns_list">
+            <li>
+              <a href="https://www.instagram.com/#" class="sns_link" aria-label="Instagram">
+                <img
+                  src="images/footer_sns_instagram.png"
+                  alt="인스타그램"
+              >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/openhappinesskorea" class="sns_link" aria-label="YouTube">
+                <img src="images/footer_sns_youtube.png" alt="유튜브">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/cocacolasouthkorea/?brand_redir=40796308305" class="sns_link" aria-label="Facebook">
+                <img src="images/footer_sns_facebook.png" alt="페이스북">
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/CocaCola_Korea" class="sns_link" aria-label="X">
+                <img src="images/footer_sns_x.png" alt="트위터">
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <img
+          src="images/footer_bear.png"
+          alt="푸터 곰 이미지"
+          class="footer_bear"
+        >
+      </div>
+    </footer>
+    <footer class="footer_tablet" id="footer_tablet">
+      <img
+        src="images/footer_bg_tablet.png"
+        alt="푸터 배너 이미지"
+        class="footer_bg_tablet"
+      >
+      <nav class="footer_quickbar" aria-label="푸터 빠른 메뉴">
+        <button type="button" class="footer_quickbtn" data-panel="gnb">
+          <span class="footer_quicklabel">고객센터</span>
+        </button>
+        <button type="button" class="footer_quickbtn" data-panel="policy">
+          <span class="footer_quicklabel">약관</span>
+        </button>
+        <button type="button" class="footer_quickbtn" data-panel="sns">
+          <span class="footer_quicklabel">SNS</span>
+        </button>
+      </nav>
+      <div class="footer_panel" hidden>
+        <div class="panel_box" data-panel-box="gnb" hidden>
+          <ul class="panel_list">
+            <li><a href="faq.html">• FAQ</a></li>
+            <li><a href="customer.html">• 고객안내</a></li>
+            <li><a href="contact.html">• 문의하기</a></li>
+            <li><a href="notice.html">• 공지사항</a></li>
+        </div>
+        <div class="panel_box" data-panel-box="policy" hidden>
+          <ul class="panel_list">
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+        </div>
+        <div class="panel_box" data-panel-box="sns" hidden>
+          <div class="sns_panel">
+            <a href="https://www.instagram.com/cocacola_korea/" class="sns_imglink" aria-label="Instagram">
+              <img src="images/footer_sns_instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.youtube.com/user/openhappinesskorea" class="sns_imglink" aria-label="YouTube">
+              <img src="images/footer_sns_youtube.png" alt="YouTube">
+            </a>
+
+            <a href="https://www.facebook.com/cocacolasouthkorea/?brand_redir=40796308305" class="sns_imglink" aria-label="Facebook">
+              <img src="images/footer_sns_facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://x.com/CocaCola_Korea" class="sns_imglink" aria-label="x">
+              <img src="images/footer_sns_x.png" alt="x">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <h2 class="footer_logo_tablet">
+          <img src="images/footer_logo.png" alt="푸터 로고" >
+        </h2>
+        <div class="footer_text_tablet">
+          <p>
+            코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 페이지입니다.
+            <br >코카콜라를 통해 브랜드의 에너지와 즐거움을 느껴보세요.
+          </p>
+          <p><span>©2025 코카콜라. All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const menuBtn = document.querySelector(".menu_btn");
+      const menu = document.querySelector(".menu_layer_tablet");
+      const dim = document.querySelector(".menu_dim");
+      const closeBtn = document.querySelector(".menu_close");
+
+      menuBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const willOpen = !menu.classList.contains("active");
+        menu.classList.toggle("active", willOpen);
+        dim.classList.toggle("active", willOpen);
+        document.body.classList.toggle("menu-open", willOpen);
+      });
+
+      function closeMenu() {
+        menu.classList.remove("active");
+        dim.classList.remove("active");
+        document.body.classList.remove("menu-open");
+      }
+
+      closeBtn.addEventListener("click", closeMenu);
+      dim.addEventListener("click", closeMenu);
+    </script>
+    <script>
+      const videoBox = document.getElementById("kwaveVideo");
+      const playBtn = videoBox?.querySelector(".video_play");
+      const thumb = videoBox?.querySelector(".video_thumbnail");
+      const YT_ID = "g8GCY-1HEGg";
+      playBtn?.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (videoBox.querySelector("iframe")) return;
+        if (thumb) thumb.style.visibility = "hidden";
+        playBtn.style.display = "none";
+        const iframe = document.createElement("iframe");
+        iframe.className = "video_iframe";
+        iframe.src = `https://www.youtube.com/embed/${YT_ID}?autoplay=1&mute=1&playsinline=1&rel=0`;
+        iframe.title = "K-Wave video";
+        iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+        iframe.allowFullscreen = true;
+        videoBox.appendChild(iframe);
+      });
+    </script>
+
+    <script>
+  (() => {
+    const root = document.getElementById("kwaveSlider");
+    if (!root) return;
+
+    const view = root.querySelector(".kv_viewport");
+    const track = root.querySelector(".kv_track");
+    const prevBtn = root.querySelector(".kv_prev");
+    const nextBtn = root.querySelector(".kv_next");
+    if (!view || !track || !prevBtn || !nextBtn) return;
+
+    let slides = Array.from(track.children);
+    if (slides.length < 2) return;
+
+    slides.forEach((card) => {
+      if (card.querySelector(".kv_play")) return;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "kv_play";
+      btn.setAttribute("aria-label", "영상 재생");
+      btn.textContent = "▶";
+      card.appendChild(btn);
+    });
+
+    root.addEventListener("click", (e) => {
+      const btn = e.target.closest(".kv_play");
+      if (!btn) return;
+      const card = btn.closest(".kv_card");
+      if (!card) return;
+      const media = e.target.closest(".kv_card > img, .kv_card > iframe, .kv_play");
+      if (!media) return;
+      const ytId = card.getAttribute("data-yt");
+      if (!ytId) return;
+      if (card.querySelector("iframe")) return;
+
+      btn.style.display = "none";
+      const thumb = card.querySelector(":scope > img");
+      if (thumb) thumb.style.visibility = "hidden";
+
+      const iframe = document.createElement("iframe");
+      iframe.className = "kv_iframe";
+      iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&mute=1&playsinline=1&rel=0`;
+      iframe.title = "YouTube video";
+      iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+      iframe.allowFullscreen = true;
+      card.appendChild(iframe);
+    });
+
+    let index = 1;
+    let moving = false;
+
+    let dragOn = false;
+    let locked = false;
+    let startX = 0;
+    let startY = 0;
+    let dx = 0;
+    let dy = 0;
+    let basePx = 0;
+
+    const thresholdRatio = 0.18;
+
+    const isSlideMode = () => window.innerWidth <= 1194;
+
+    const setTransition = (on) => {
+      track.style.transition = on ? "transform 520ms ease" : "none";
+    };
+
+    const slideW = () => view.getBoundingClientRect().width;
+
+    const setPx = (px) => {
+      track.style.transform = `translate3d(${px}px, 0, 0)`;
+    };
+
+    const gotoIndex = (nextIndex, withTransition = true) => {
+      const w = slideW();
+      index = nextIndex;
+      setTransition(withTransition);
+      setPx(-index * w);
+    };
+
+    const rebuild = () => {
+      if (!isSlideMode()) {
+        track.style.transition = "";
+        track.style.transform = "";
+        track.innerHTML = "";
+        slides.forEach((el) => track.appendChild(el));
+        slides = Array.from(track.children);
+        index = 0;
+        moving = false;
+        return;
+      }
+
+      track.innerHTML = "";
+      slides.forEach((el) => track.appendChild(el));
+      slides = Array.from(track.children);
+      if (slides.length < 2) return;
+
+      const first = slides[0].cloneNode(true);
+      const last = slides[slides.length - 1].cloneNode(true);
+
+      track.insertBefore(last, track.firstChild);
+      track.appendChild(first);
+
+      index = 1;
+      setTransition(false);
+      gotoIndex(index, false);
+      track.offsetHeight;
+      setTransition(true);
+
+      moving = false;
+    };
+
+    const go = (dir) => {
+      if (!isSlideMode()) return;
+      if (moving) return;
+      moving = true;
+      gotoIndex(index + dir, true);
+    };
+
+    track.addEventListener("transitionend", () => {
+      if (!isSlideMode()) return;
+
+      const total = track.children.length;
+      const lastIndex = total - 1;
+
+      if (index === lastIndex) {
+        setTransition(false);
+        index = 1;
+        gotoIndex(index, false);
+        track.offsetHeight;
+        setTransition(true);
+      }
+
+      if (index === 0) {
+        setTransition(false);
+        index = lastIndex - 1;
+        gotoIndex(index, false);
+        track.offsetHeight;
+        setTransition(true);
+      }
+
+      moving = false;
+    });
+
+    prevBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      go(-1);
+    });
+
+    nextBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      go(1);
+    });
+
+    const onDown = (e) => {
+      if (!isSlideMode()) return;
+      if (moving) return;
+
+      if (e.target.closest(".kv_play")) return;
+
+      const card = e.target.closest(".kv_card");
+      if (!card || !root.contains(card)) return;
+
+      const block = e.target.closest("a, button, input, textarea, select, label");
+      if (block) return;
+
+      dragOn = true;
+      locked = false;
+      dx = 0;
+      dy = 0;
+
+      startX = e.clientX;
+      startY = e.clientY;
+      basePx = -index * slideW();
+
+      root.classList.add("is-dragging");
+      setTransition(false);
+
+      if (view.setPointerCapture) view.setPointerCapture(e.pointerId);
+
+      track.style.userSelect = "none";
+    };
+
+    const onMove = (e) => {
+      if (!dragOn) return;
+
+      dx = e.clientX - startX;
+      dy = e.clientY - startY;
+
+      if (!locked) {
+        if (Math.abs(dx) > Math.abs(dy)) locked = true;
+        else return;
+      }
+
+      if (e.cancelable) e.preventDefault();
+      setPx(basePx + dx);
+    };
+
+    const endDrag = () => {
+      if (!dragOn) return;
+      dragOn = false;
+
+      root.classList.remove("is-dragging");
+      track.style.userSelect = "";
+
+      const w = slideW();
+      const abs = Math.abs(dx);
+
+      setTransition(true);
+
+      if (locked && abs > w * thresholdRatio) {
+        if (dx < 0) gotoIndex(index + 1, true);
+        else gotoIndex(index - 1, true);
+        moving = true;
+      } else {
+        gotoIndex(index, true);
+      }
+    };
+
+    view.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      onDown(e);
+    });
+
+    view.addEventListener("pointermove", onMove, { passive: false });
+    view.addEventListener("pointerup", endDrag);
+    view.addEventListener("pointercancel", endDrag);
+    view.addEventListener("pointerleave", () => {
+      if (dragOn) endDrag();
+    });
+
+    view.addEventListener("dragstart", (e) => e.preventDefault());
+
+    let resizeRaf = 0;
+    let lastW = window.innerWidth;
+
+    window.addEventListener("resize", () => {
+      cancelAnimationFrame(resizeRaf);
+      resizeRaf = requestAnimationFrame(() => {
+        const w = window.innerWidth;
+        if (w === lastW) return;
+        lastW = w;
+
+        const current = slides[index - 1] ? index - 1 : 0;
+        rebuild();
+        if (!isSlideMode()) return;
+
+        index = Math.min(current + 1, track.children.length - 2);
+        setTransition(false);
+        gotoIndex(index, false);
+        track.offsetHeight;
+        setTransition(true);
+      });
+    });
+
+    rebuild();
+  })();
+</script>
+
+    <script>
+      (() => {
+        const root = document.querySelector("#limitedSlider");
+        if (!root) return;
+
+        const view = root.querySelector(".limited_viewport");
+        const track = root.querySelector(".limited_track");
+        const prevBtn = root.querySelector(".btn_prev");
+        const nextBtn = root.querySelector(".btn_next");
+        if (!view || !track || !prevBtn || !nextBtn) return;
+
+        let slides = Array.from(track.children);
+        let index = 1;
+        let moving = false;
+
+        let dragOn = false;
+        let locked = false;
+        let startX = 0;
+        let startY = 0;
+        let dx = 0;
+        let dy = 0;
+        let basePx = 0;
+
+        const thresholdRatio = 0.18;
+
+        const setTransition = (on) => {
+          track.style.transition = on
+            ? "transform 520ms cubic-bezier(.22,.61,.36,1)"
+            : "none";
+        };
+
+        const slideW = () => view.getBoundingClientRect().width;
+
+        const setPx = (px) => {
+          track.style.transform = `translate3d(${px}px, 0, 0)`;
+        };
+
+        const gotoIndex = (nextIndex, withTransition = true) => {
+          const w = slideW();
+          index = nextIndex;
+          setTransition(withTransition);
+          setPx(-index * w);
+        };
+
+        const rebuild = () => {
+          track.innerHTML = "";
+          slides.forEach((li) => track.appendChild(li));
+
+          slides = Array.from(track.children);
+          if (slides.length < 2) return;
+
+          const first = slides[0].cloneNode(true);
+          const last = slides[slides.length - 1].cloneNode(true);
+
+          track.insertBefore(last, track.firstChild);
+          track.appendChild(first);
+
+          index = 1;
+          setTransition(false);
+          gotoIndex(index, false);
+          track.offsetHeight;
+          setTransition(true);
+
+          moving = false;
+        };
+
+        const go = (dir) => {
+          if (moving) return;
+          moving = true;
+          gotoIndex(index + dir, true);
+        };
+
+        track.addEventListener("transitionend", () => {
+          const total = track.children.length;
+          const lastIndex = total - 1;
+
+          if (index === lastIndex) {
+            setTransition(false);
+            index = 1;
+            gotoIndex(index, false);
+            track.offsetHeight;
+            setTransition(true);
+          }
+
+          if (index === 0) {
+            setTransition(false);
+            index = lastIndex - 1;
+            gotoIndex(index, false);
+            track.offsetHeight;
+            setTransition(true);
+          }
+
+          moving = false;
+        });
+
+        prevBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          go(-1);
+        });
+
+        nextBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          go(1);
+        });
+
+        const canSelector = ".limited_drink";
+
+        const onDown = (e) => {
+          if (moving) return;
+
+          const fromCan = e.target.closest(canSelector);
+          if (!fromCan || !root.contains(fromCan)) return;
+
+          dragOn = true;
+          locked = false;
+          dx = 0;
+          dy = 0;
+
+          startX = e.clientX;
+          startY = e.clientY;
+          basePx = -index * slideW();
+
+          root.classList.add("is-dragging");
+          setTransition(false);
+
+          if (view.setPointerCapture) view.setPointerCapture(e.pointerId);
+          track.style.userSelect = "none";
+        };
+
+        const onMove = (e) => {
+          if (!dragOn) return;
+
+          dx = e.clientX - startX;
+          dy = e.clientY - startY;
+
+          if (!locked) {
+            if (Math.abs(dx) > Math.abs(dy)) locked = true;
+            else return;
+          }
+
+          setPx(basePx + dx);
+        };
+
+        const endDrag = () => {
+          if (!dragOn) return;
+          dragOn = false;
+
+          root.classList.remove("is-dragging");
+          track.style.userSelect = "";
+
+          const w = slideW();
+          const abs = Math.abs(dx);
+
+          setTransition(true);
+
+          if (locked && abs > w * thresholdRatio) {
+            if (dx < 0) gotoIndex(index + 1, true);
+            else gotoIndex(index - 1, true);
+            moving = true;
+          } else {
+            gotoIndex(index, true);
+          }
+        };
+
+        view.addEventListener(
+          "touchmove",
+          (e) => {
+            if (!dragOn) return;
+            if (!locked) return;
+            e.preventDefault();
+          },
+          { passive: false }
+        );
+
+        view.addEventListener("pointerdown", (e) => {
+          if (e.pointerType === "mouse" && e.button !== 0) return;
+          onDown(e);
+        });
+
+        view.addEventListener("pointermove", onMove);
+        view.addEventListener("pointerup", endDrag);
+        view.addEventListener("pointercancel", endDrag);
+        view.addEventListener("pointerleave", () => {
+          if (dragOn) endDrag();
+        });
+
+        view.addEventListener("dragstart", (e) => e.preventDefault());
+
+        let resizeRaf = 0;
+        let lastW = window.innerWidth;
+
+        window.addEventListener("resize", () => {
+          cancelAnimationFrame(resizeRaf);
+          resizeRaf = requestAnimationFrame(() => {
+            const w = window.innerWidth;
+            if (w === lastW) return;
+            lastW = w;
+
+            const current = slides[index - 1] ? index - 1 : 0;
+            rebuild();
+
+            index = Math.min(current + 1, track.children.length - 2);
+            setTransition(false);
+            gotoIndex(index, false);
+            track.offsetHeight;
+            setTransition(true);
+          });
+        });
+
+        rebuild();
+      })();
+    </script>
+
+    <script>
+      (() => {
+        const root = document.querySelector("#footer_tablet");
+        if (!root) return;
+        const btns = root.querySelectorAll(".footer_quickbtn");
+        const panel = root.querySelector(".footer_panel");
+        const boxes = root.querySelectorAll(".panel_box");
+        const isTablet = () => window.innerWidth <= 1194;
+        function closeAll() {
+          btns.forEach((b) => {
+            b.classList.remove("is-active");
+            b.setAttribute("aria-expanded", "false");
+          });
+          boxes.forEach((x) => (x.hidden = true));
+          if (panel) panel.hidden = true;
+        }
+        function openOne(name) {
+          if (!panel) return;
+          panel.hidden = false;
+          boxes.forEach((x) => (x.hidden = x.dataset.panelBox !== name));
+        }
+        btns.forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            if (!isTablet()) return;
+            const name = btn.dataset.panel;
+            const wasOpen = btn.classList.contains("is-active");
+            closeAll();
+            if (!wasOpen) {
+              btn.classList.add("is-active");
+              btn.setAttribute("aria-expanded", "true");
+              openOne(name);
+            }
+          });
+        });
+        document.addEventListener("click", (e) => {
+          if (!isTablet()) return;
+          if (!root.contains(e.target)) closeAll();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (!isTablet()) return;
+          if (e.key === "Escape") closeAll();
+        });
+        window.addEventListener("resize", () => {
+          if (!isTablet()) closeAll();
+        });
+        closeAll();
+      })();
+    </script>
+    <script>
+      (() => {
+        const toggle = document.getElementById("search_toggle");
+        const label = document.querySelector('label.search_icon[for="search_toggle"]');
+        const form = document.getElementById("searchForm");
+        const input = document.getElementById("searchInput");
+
+        if (!toggle || !label || !form || !input) return;
+
+        const openBox = () => {
+          toggle.checked = true;
+          requestAnimationFrame(() => input.focus());
+        };
+
+        const closeBox = () => {
+          toggle.checked = false;
+          input.blur();
+        };
+
+        const runSearch = () => {
+          const q = input.value.trim();
+          if (!q) return false;
+          const url = "https://www.google.com/search?q=" + encodeURIComponent(q);
+          window.open(url, "_blank", "noopener,noreferrer");
+          return true;
+        };
+
+        label.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (!toggle.checked) openBox();
+          else closeBox();
+        });
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (runSearch()) closeBox();
+          else input.focus();
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeBox();
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!toggle.checked) return;
+          if (label.contains(e.target) || form.contains(e.target)) return;
+          closeBox();
+        });
+      })();
+    </script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 0,
+        easing: "ease-out-cubic",
+        duration: 1800,
+        delay: 150
+      });
+    </script>
+    <script>
+      $(function () {
+        const $header = $("#header");
+
+        const getHeaderH = () => {
+          const h = $header.outerHeight() || 0;
+          return h + 12;
+        };
+
+        $(".quick_nav_btn").on("click", function (e) {
+          const href = $(this).attr("href");
+          if (!href || href.charAt(0) !== "#") return;
+
+          const $target = $(href);
+          if (!$target.length) return;
+
+          e.preventDefault();
+
+          const top = $target.offset().top - getHeaderH();
+
+          $("html, body").stop(true).animate(
+            { scrollTop: top },
+            700,
+            "swing"
+          );
+        });
+      });
+    </script>
+    <script>
+      (() => {
+        const btn = document.querySelector(".top_btn");
+        const header = document.querySelector("#header");
+        if (!btn) return;
+
+        const getHeaderOffset = () => {
+          const h = header ? header.offsetHeight : 0;
+          return h + 12;
+        };
+
+        const toggleShow = () => {
+          const y = window.scrollY || document.documentElement.scrollTop || 0;
+          btn.classList.toggle("is-show", y > 400);
+        };
+
+        const scrollTop = () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        };
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          scrollTop();
+        });
+
+        window.addEventListener("scroll", toggleShow, { passive: true });
+        window.addEventListener("resize", toggleShow);
+        toggleShow();
+      })();
+    </script>
+  </body>
+</html>
