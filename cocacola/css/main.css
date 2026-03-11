@@ -1154,7 +1154,14 @@
         position: relative;
         padding-left: 26px;
       }
+      .pf_notice_check input{
+        margin: 0;
+        accent-color: #f40009;
+      }
 
+      .pf_notice_check span{
+        color: #fff8f2;
+      }
       .pf_notice_btns {
         display: inline-flex;
         gap: 8px;
