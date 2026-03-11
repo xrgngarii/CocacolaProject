@@ -1,3 +1,11 @@
+if (window.AOS) {
+  AOS.init({
+    once: true,
+    offset: 80,
+    duration: 900
+  });
+}
+
 (() => {
   const menuBtn = document.querySelector(".menu_btn");
   const menu = document.querySelector(".menu_layer_tablet");
@@ -34,7 +42,7 @@
   const focusFirst = () => {
     const list = getFocusable();
     const target = list[0] || closeBtn;
-    target && target.focus();
+    if (target) target.focus();
   };
 
   const openMenu = () => {
@@ -65,6 +73,7 @@
     } else {
       menuBtn.focus();
     }
+
     lastFocus = null;
   };
 
@@ -86,11 +95,9 @@
         e.preventDefault();
         last.focus();
       }
-    } else {
-      if (document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+    } else if (document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
     }
   };
 
@@ -108,8 +115,7 @@
 
   menuBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    const willOpen = !menu.classList.contains("active");
-    if (willOpen) openMenu();
+    if (!menu.classList.contains("active")) openMenu();
     else closeMenu();
   });
 
@@ -130,6 +136,7 @@
 
 (() => {
   if (window.innerWidth <= 1194) return;
+
   const wrap = document.querySelector(".brand_wrap");
   if (!wrap) return;
 
@@ -138,9 +145,7 @@
   const nextBtn = wrap.querySelector(".brand_next");
   if (!track || !prevBtn || !nextBtn) return;
 
-  const ORIGINALS = Array.from(track.children).map((li) =>
-    li.cloneNode(true)
-  );
+  const originals = Array.from(track.children).map((li) => li.cloneNode(true));
 
   const getPerView = () => {
     const w = window.innerWidth;
@@ -155,9 +160,7 @@
   let itemW = 0;
 
   const setTransition = (on) => {
-    track.style.transition = on
-      ? "transform 520ms cubic-bezier(.22,.61,.36,1)"
-      : "none";
+    track.style.transition = on ? "transform 520ms cubic-bezier(.22,.61,.36,1)" : "none";
   };
 
   const setPos = () => {
@@ -180,15 +183,11 @@
     track.style.display = "flex";
     track.style.willChange = "transform";
 
-    const head = ORIGINALS.slice(0, perView).map((el) =>
-      el.cloneNode(true)
-    );
-    const tail = ORIGINALS.slice(-perView).map((el) =>
-      el.cloneNode(true)
-    );
+    const head = originals.slice(0, perView).map((el) => el.cloneNode(true));
+    const tail = originals.slice(-perView).map((el) => el.cloneNode(true));
 
     tail.forEach((el) => track.appendChild(el));
-    ORIGINALS.forEach((el) => track.appendChild(el.cloneNode(true)));
+    originals.forEach((el) => track.appendChild(el.cloneNode(true)));
     head.forEach((el) => track.appendChild(el));
 
     itemW = wrap.clientWidth / perView;
@@ -207,7 +206,7 @@
 
   function go(dir) {
     if (moving) return;
-    if (ORIGINALS.length <= perView) return;
+    if (originals.length <= perView) return;
 
     moving = true;
     index += dir * perView;
@@ -215,7 +214,7 @@
   }
 
   track.addEventListener("transitionend", () => {
-    const total = ORIGINALS.length;
+    const total = originals.length;
     const start = perView;
     const end = perView + total;
 
@@ -240,6 +239,8 @@
 })();
 
 $(function () {
+  if (typeof $.fn.bxSlider !== "function") return;
+
   var $brand = $(".brand_wrap .brand_slider");
   if (!$brand.length) return;
 
@@ -384,12 +385,11 @@ $(function () {
     track.style.transform = `translate3d(${px}px, 0, 0)`;
   }
 
-  function gotoIndex(nextIndex, withTransition = true) {
+  function gotoIndex(nextIndex, withTransition) {
     if (!isPC()) return;
     const w = slideW();
     index = nextIndex;
-    if (withTransition) setTransition(true);
-    else setTransition(false);
+    setTransition(withTransition !== false);
     setPx(-index * w);
   }
 
@@ -470,7 +470,7 @@ $(function () {
     basePx = -index * slideW();
 
     setTransition(false);
-    view.setPointerCapture?.(e.pointerId);
+    if (view.setPointerCapture) view.setPointerCapture(e.pointerId);
 
     track.style.userSelect = "none";
     track.style.cursor = "grabbing";
@@ -518,51 +518,50 @@ $(function () {
 
   view.addEventListener("dragstart", (e) => e.preventDefault());
 
-  window.addEventListener("resize", () => {
-    rebuild();
-  });
+  window.addEventListener("resize", rebuild);
 
   rebuild();
 })();
 
-$(function () {
+$(window).on("load", function () {
+  if (typeof $.fn.bxSlider !== "function") return;
+
   var $news = $(".news_slider");
   if (!$news.length) return;
+  if (window.innerWidth <= 767) return;
 
-  var slider = $news.bxSlider({
+  var newsSlider = $news.bxSlider({
     minSlides: 3,
     maxSlides: 3,
     moveSlides: 1,
     slideWidth: 340,
-    slideMargin: 30,
+    slideMargin: 69,
     pager: false,
     controls: false,
+    infiniteLoop: true,
+    hideControlOnEnd: false,
+    adaptiveHeight: false,
     speed: 520
   });
 
   $(".news_event_section .prev")
-    .off("click")
-    .on("click", function (e) {
+    .off("click.news")
+    .on("click.news", function (e) {
       e.preventDefault();
-      slider.goToPrevSlide();
+      newsSlider.goToPrevSlide();
     });
 
   $(".news_event_section .next")
-    .off("click")
-    .on("click", function (e) {
+    .off("click.news")
+    .on("click.news", function (e) {
       e.preventDefault();
-      slider.goToNextSlide();
-    });
-
-  $(".news_more_btn")
-    .off("click")
-    .on("click", function (e) {
-      e.preventDefault();
-      slider.goToNextSlide();
+      newsSlider.goToNextSlide();
     });
 });
 
 $(function () {
+  if (typeof $.fn.bxSlider !== "function") return;
+
   var $sustain = $(".sustain_mobile_slider");
   if (!$sustain.length) return;
 
@@ -594,11 +593,12 @@ $(function () {
 });
 
 $(function () {
+  if (typeof $.fn.bxSlider !== "function") return;
+
   var $newsM = $("#news_event_mobile .news_mobile_slider");
   if (!$newsM.length) return;
 
   var totalSlides = $newsM.children("li").length;
-
   var $pager = $("#news_event_mobile .news_pager_custom");
   $pager.empty();
 
@@ -611,11 +611,7 @@ $(function () {
   }
 
   function setActiveDot(slideIndex) {
-    $pager
-      .children("button")
-      .removeClass("is-active")
-      .eq(slideIndex)
-      .addClass("is-active");
+    $pager.children("button").removeClass("is-active").eq(slideIndex).addClass("is-active");
   }
 
   var newsMSlider = $newsM.bxSlider({
@@ -715,7 +711,6 @@ $(function () {
 
   function show(nextIdx) {
     const dur = getDur();
-
     const prevIndex = idx;
     const nextIndex = (nextIdx + slides.length) % slides.length;
     if (prevIndex === nextIndex) return;
@@ -802,9 +797,9 @@ $(function () {
 
   close();
 
-  btnClose && btnClose.addEventListener("click", handleClose);
-  btnLater && btnLater.addEventListener("click", handleClose);
-  btnOk && btnOk.addEventListener("click", handleClose);
+  if (btnClose) btnClose.addEventListener("click", handleClose);
+  if (btnLater) btnLater.addEventListener("click", handleClose);
+  if (btnOk) btnOk.addEventListener("click", handleClose);
 
   popup.addEventListener("click", (e) => {
     if (e.target === popup) handleClose();
@@ -817,13 +812,9 @@ $(function () {
   });
 })();
 
-AOS.init({
-  once: true,
-  offset: 80,
-  duration: 900
-});
-
 $(function () {
+  if (typeof $.fn.bxSlider !== "function") return;
+
   var $root = $("#limited_m");
   if (!$root.length) return;
 
@@ -1078,7 +1069,7 @@ $(function () {
   const openBtns = document.querySelectorAll('[data-map-open="true"]');
   const mapContainer = document.getElementById("kakaoMap");
 
-  if (!modal || !closeBtn || !openBtns.length || !mapContainer) return;
+  if (!modal || !closeBtn || !openBtns.length || !mapContainer || !window.kakao || !window.kakao.maps) return;
 
   let mapLoaded = false;
   let map = null;
@@ -1134,9 +1125,7 @@ $(function () {
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
 
-    if (!mapLoaded) {
-      initMap();
-    }
+    if (!mapLoaded) initMap();
 
     setTimeout(() => {
       refreshMap();
