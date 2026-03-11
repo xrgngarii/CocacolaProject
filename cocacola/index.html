@@ -1,8 +1,954 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>Cocacola</title>
-</head>
-<body></body>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코카콜라</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="코카콜라 - Pure Joy">
+    <meta property="og:description" content="코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 포트폴리오 페이지입니다.">
+    <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/index.html">
+    <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_index.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="코카콜라 - Pure Joy">
+    <meta name="twitter:description" content="코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 포트폴리오 페이지입니다.">
+    <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_index.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4/dist/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="skip_menu">
+      <a href="#gnb">주요메뉴 바로가기</a>
+      <a href="#brand">브랜드 바로가기</a>
+      <a href="#limited">코카콜라 한정판 바로가기</a>
+      <a href="#sustainability">지속 가능성 바로가기</a>
+      <a href="#news_event_section">뉴스 및 이벤트 바로가기</a>
+      <a href="#footer">하단메뉴 바로가기</a>
+    </div>
+    <header id="header" class="header header--overlay">
+      <button type="button" class="menu_btn">
+        <img src="images/header_btn.png" alt="메뉴 버튼">
+      </button>
+      <h1 class="logo">
+        <a href="index.html" class="logo_link">
+          <img
+            src="images/cocacola_logo.png"
+            alt="코카콜라 로고"
+            class="logo_default"
+        >
+          <img
+            src="images/cocacola_logo_hover.png"
+            alt=""
+            class="logo_hover"
+            aria-hidden="true"
+        >
+        </a>
+      </h1>
+      <nav id="gnb" class="gnb">
+        <h2 class="hide">주요 메뉴</h2>
+        <ul class="depth1">
+          <li><a href="company.html">Company</a></li>
+          <li><a href="brand.html">Brand</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+          <li><a href="contents.html">Contents</a></li>
+          <li><a href="goods.html">Goods</a></li>
+        </ul>
+      </nav>
+      <div class="top_menu">
+        <h2 class="hide">유틸 메뉴</h2>
+        <ul>
+          <li><a href="#none">•한국어</a></li>
+          <li><a href="login.html">•LOGIN</a></li>
+          <li><a href="join.html">•JOIN</a></li>
+        </ul>
+      </div>
+      <div class="search">
+        <input type="checkbox" id="search_toggle" class="hide">
+        <label for="search_toggle" class="search_icon">
+          <img src="images/search.png" alt="검색 아이콘" class="icon_pc">
+          <img
+            src="images/tablet_search.png"
+            alt="검색 아이콘"
+            class="icon_tab"
+        >
+        </label>
+        <form class="search_form" id="searchForm">
+          <input type="text" id="searchInput" name="q" placeholder="검색어를 입력하세요">
+        </form>
+      </div>
+    </header>
+
+    <nav class="menu_layer_tablet" id="menu_layer_tablet" aria-hidden="true">
+      <button type="button" class="menu_close" aria-label="메뉴 닫기">✕</button>
+      <ul class="depth1">
+        <li><a href="company.html" class="depth1_btn">Company</a></li>
+        <li><a href="brand.html" class="depth1_btn">Brand</a></li>
+        <li><a href="sustainability.html" class="depth1_btn">Sustainability</a></li>
+        <li><a href="contents.html" class="depth1_btn">Contents</a></li>
+        <li><a href="goods.html" class="depth1_btn">Goods</a></li>
+      </ul>
+
+      <div class="tablet_util">
+        <a href="login.html" class="util_link">LOGIN</a>
+        <a href="join.html" class="util_link">JOIN</a>
+      </div>
+
+      <div class="tablet_util2">
+        <ul>
+          <li><a href="faq.html">• FAQ</a></li>
+          <li><a href="customer.html">• 고객안내</a></li>
+          <li><a href="contact.html">• 문의하기</a></li>
+          <li><a href="notice.html">• 공지사항</a></li>
+          <li><a href="#none" class="menu_map_link" data-map-open="true">• 오시는 길</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu_dim"></div>
+
+    <div class="pf_notice_dim" id="pfNotice" aria-hidden="true">
+      <div
+        class="pf_notice_modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="pfNoticeTitle"
+      >
+        <div class="pf_notice_head">
+          <h2 class="pf_notice_title" id="pfNoticeTitle">포트폴리오 안내</h2>
+          <button
+            type="button"
+            class="pf_notice_close"
+            id="pfNoticeClose"
+            aria-label="닫기"
+          >
+            ✕
+          </button>
+        </div>
+
+        <div class="pf_notice_body">
+          <p>
+            본 페이지는 <strong>포트폴리오 UI 구현 목적</strong>으로 제작된
+            결과물이며
+            <strong>실제 서비스(상업용)가 아닙니다.</strong>
+          </p>
+          <p>
+            사용된 <strong>로고·이미지·영상·문구</strong> 등 콘텐츠의 저작권은
+            <strong>각 권리자에게</strong> 있으며, 본 포트폴리오에서는
+            <strong>학습 및 시연 목적</strong>으로만 사용되었습니다.
+          </p>
+        </div>
+
+        <div class="pf_notice_footer">
+          <div class="pf_notice_btns">
+            <button
+              type="button"
+              class="pf_notice_btn pf_notice_btn--ghost"
+              id="pfNoticeLater"
+            >
+              닫기
+            </button>
+            <button
+              type="button"
+              class="pf_notice_btn pf_notice_btn--primary"
+              id="pfNoticeOk"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main id="main" class="main">
+      <section class="main_image">
+        <h2 class="hide">메인 배너</h2>
+        <img
+          src="images/main_bg.png"
+          alt="메인 배너 이미지"
+          class="main_slide is-active"
+      >
+        <img
+          src="images/main_bg2.png"
+          alt=""
+          class="main_slide"
+          aria-hidden="true"
+      >
+        <img
+          src="images/main_bg3.png"
+          alt=""
+          class="main_slide"
+          aria-hidden="true"
+      >
+        <img
+          src="images/main_bg4.png"
+          alt=""
+          class="main_slide"
+          aria-hidden="true"
+      >
+        <button class="main_pause_btn" aria-label="일시정지" type="button">
+          <svg class="icon icon-pause" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+            <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+          </svg>
+          <svg class="icon icon-play" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 5v14l11-7z"></path>
+          </svg>
+        </button>
+
+        <div class="main_banner_text">
+          <div class="main_banner_text_inner"
+              data-aos="fade-up"
+              data-aos-duration="1800"
+              data-aos-delay="150"
+              data-aos-easing="ease-out-cubic">
+            <h3 class="main_banner_title">Pure Joy</h3>
+            <p class="main_banner_desc">“코카콜라, 일상을 빛내는 특별한 콜라보”</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="brand" class="brand">
+        <h2 class="hide">브랜드 바로가기</h2>
+        <div class="brand_wrap">
+          <a href="#none" class="brand_prev">
+            <img src="images/arrow_prev.png" alt="이전">
+          </a>
+          <ul class="brand_slider">
+            <li class="coke">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/coca-cola"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="코카콜라 자세히 보기"
+              >
+                <img src="images/cocacola.png" alt="코카콜라">
+              </a>
+            </li>
+
+            <li class="fanta">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/fanta"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="환타 자세히 보기"
+              >
+                <img src="images/fanta.png" alt="환타">
+              </a>
+            </li>
+
+            <li class="sprite">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/sprite"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="스프라이트 자세히 보기"
+              >
+                <img src="images/sprite.png" alt="스프라이트">
+              </a>
+            </li>
+
+            <li class="pepper">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/dr-pepper"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="닥터페퍼 자세히 보기"
+              >
+                <img src="images/pepper.png" alt="닥터페퍼">
+              </a>
+            </li>
+
+            <li class="powerade">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/powerade"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="파워에이드 자세히 보기"
+              >
+                <img src="images/powerade.png" alt="파워에이드">
+              </a>
+            </li>
+
+            <li class="toretta">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/toreta"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="토레타 자세히 보기"
+              >
+                <img src="images/toretta.png" alt="토레타">
+              </a>
+            </li>
+
+            <li class="crushed-pear">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/sac-sac"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="갈아만든배 자세히 보기"
+              >
+                <img src="images/crushed-pear.png" alt="갈아만든배">
+              </a>
+            </li>
+
+            <li class="minutemaid">
+              <a
+                href="https://www.coca-cola.com/kr/ko/brands/minute-maid"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-label="미닛메이드 자세히 보기"
+              >
+                <img src="images/minutemaid.png" alt="미닛메이드">
+              </a>
+            </li>
+          </ul>
+          <a href="#none" class="brand_next">
+            <img src="images/arrow_next.png" alt="다음">
+          </a>
+        </div>
+      </section>
+
+      <section id="limited" class="limited">
+        <h2 class="hide">코카콜라 한정판</h2>
+        <div class="limited_pc">
+          <div class="limited_view">
+            <ul class="limited_track">
+              <li class="limited_slide">
+                <img
+                  src="images/limited_starlight_bg.png"
+                  alt="코카콜라 스타라이트"
+                  class="limited_bg"
+              >
+              </li>
+              <li class="limited_slide">
+                <img
+                  src="images/limited_oreo_bg.png"
+                  alt="코카콜라 제로 슈거 오레오 리미티드 에디션"
+                  class="limited_bg"
+              >
+              </li>
+              <li class="limited_slide">
+                <img
+                  src="images/limited_k-wave_bg.png"
+                  alt="코카콜라 K-Wave Zero Sugar"
+                  class="limited_bg"
+              >
+              </li>
+              <li class="limited_slide">
+                <img
+                  src="images/limited_tears_bg.png"
+                  alt="코카콜라 해피 티어스 제로 슈거"
+                  class="limited_bg"
+              >
+              </li>
+              <li class="limited_slide">
+                <img
+                  src="images/limited_y3000_bg.png"
+                  alt="코카콜라 Y3000"
+                  class="limited_bg"
+              >
+              </li>
+              <li class="limited_slide">
+                <img
+                  src="images/limited_ultimate_bg.png"
+                  alt="코카콜라 제로 슈거 얼티밋"
+                  class="limited_bg"
+              >
+              </li>
+            </ul>
+          </div>
+          <a href="#none" class="prev limited_prev">
+            <img src="images/arrow_prev.png" alt="이전">
+          </a>
+          <a href="#none" class="next limited_next">
+            <img src="images/arrow_next.png" alt="다음">
+          </a>
+        </div>
+
+        <div class="limited_m" id="limited_m">
+          <h2>한정판</h2>
+
+          <div class="limited_m_wrap">
+            <ul class="limited_m_slider">
+              <li>
+                <a href="#none" class="limited_m_card">
+                  <img src="images/limited_m_starlight.png" alt="코카콜라 스타라이트" class="limited_m_img">
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="limited_m_card">
+                  <img src="images/limited_m_oreo.png" alt="코카콜라 제로 슈거 오레오 리미티드 에디션" class="limited_m_img">
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="limited_m_card">
+                  <img src="images/limited_m_kwave.png" alt="코카콜라 K-Wave Zero Sugar" class="limited_m_img">
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="limited_m_card">
+                  <img src="images/limited_m_tears.png" alt="코카콜라 해피 티어스 제로 슈거" class="limited_m_img">
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="limited_m_card">
+                  <img src="images/limited_m_y3000.png" alt="코카콜라 Y3000" class="limited_m_img">
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="limited_m_card">
+                  <img src="images/limited_m_ultimate.png" alt="코카콜라 제로 슈거 얼티밋" class="limited_m_img">
+                </a>
+              </li>
+            </ul>
+
+            <div class="limited_m_pager"></div>
+
+            <a href="#none" class="limited_m_prev" aria-label="이전">
+              <img src="images/arrow_prev.png" alt="">
+            </a>
+            <a href="#none" class="limited_m_next" aria-label="다음">
+              <img src="images/arrow_next.png" alt="">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sustainability" class="sustainability">
+        <div class="sustain_pc">
+          <h2 class="hide">지속가능성</h2>
+          <article class="resources_card">
+            <h3 class="hide">자원순환 카드</h3>
+            <img
+              src="images/resource_bg.png"
+              alt="자원순환 캠페인 이미지"
+              class="resources_bg resources_bg--default"
+          >
+            <img
+              src="images/resource_bg_hover.png"
+              alt=""
+              class="resources_bg resources_bg--hover"
+              aria-hidden="true"
+        >
+            <a
+              href="sustainability.html#resource"
+              class="sustainability_more_btn"
+            >
+              <img
+                src="images/sustainability_more.png"
+                alt="자원순환 더 알아보기"
+            >
+            </a>
+          </article>
+
+          <article class="water_card">
+            <h3 class="hide">물 환원 카드</h3>
+            <img
+              src="images/water_bg.png"
+              alt="물 환원 이미지"
+              class="water_bg water_bg--default"
+          >
+            <img
+              src="images/water_bg_hover.png"
+              alt=""
+              class="water_bg water_bg--hover"
+              aria-hidden="true"
+       >
+            <a
+              href="sustainability.html#water"
+              class="sustainability_more_btn"
+            >
+              <img
+                src="images/sustainability_more.png"
+                alt="물 환원 더 알아보기"
+            >
+            </a>
+          </article>
+
+          <article class="community_card">
+            <h3 class="hide">커뮤니티 카드</h3>
+            <img
+              src="images/community_bg.png"
+              alt="행복한 실내 숲 이미지"
+              class="community_bg community_bg--default"
+          >
+            <img
+              src="images/community_bg_hover.png"
+              alt=""
+              class="community_bg community_bg--hover"
+              aria-hidden="true"
+       >
+          <a
+              href="sustainability.html#community"
+              class="sustainability_more_btn"
+            >
+              <img
+                src="images/sustainability_more.png"
+                alt="물 환원 더 알아보기"
+            >
+            </a>
+          </article>
+        </div>
+
+        <div class="sustain_mobile" id="sustain_mobile">
+          <h2>지속가능성</h2>
+          <div class="sustain_mobile_wrap">
+            <ul class="sustain_mobile_slider">
+              <li>
+                <div class="sustain_card">
+                  <img
+                    src="images/sustainability_resource_mobile.png"
+                    alt="자원순환 카드"
+                    class="sustain_img"
+             >
+             <a
+                    href="sustainability.html#resource"
+                    class="sustain_link"
+                  >
+                    <img
+                      src="images/sustainability_resource_btn.png"
+                      alt="자원순환 바로가기"
+                      class="mobile_card_btn"
+                  >
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="sustain_card">
+                  <img
+                    src="images/sustainability_water_mobile.png"
+                    alt="물 환원 카드"
+                    class="sustain_img"
+              >
+                <a
+                    href="sustainability.html#water"
+                    class="sustain_link"
+                  >
+                    <img
+                      src="images/sustainability_water_btn.png"
+                      alt="물 환원 바로가기"
+                      class="mobile_card_btn"
+                  >
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div class="sustain_card">
+                  <img
+                    src="images/sustainability_community_mobile.png"
+                    alt="커뮤니티 카드"
+                    class="sustain_img"
+               >
+               <a
+                    href="sustainability.html#community"
+                    class="sustain_link"
+                  >
+                    <img
+                      src="images/sustainability_community_btn.png"
+                      alt="커뮤니티 바로가기"
+                      class="mobile_card_btn"
+                  >
+                  </a>
+                </div>
+              </li>
+            </ul>
+            <a href="#none" class="sustain_prev"
+              ><img src="images/arrow_prev.png" alt="이전"
+          ></a>
+            <a href="#none" class="sustain_next"
+              ><img src="images/arrow_next.png" alt="다음"
+          ></a>
+          </div>
+        </div>
+      </section>
+      <section id="news_event_section" class="news_event_section">
+        <div class="news_header" data-aos="fade-up">
+          <h2 class="news_logo">
+            <img src="images/news_logo.png" alt="뉴스 로고">
+          </h2>
+          <p class="news_text">News & Event</p>
+        </div>
+        <div class="news_slider_container">
+          <div class="news_card">
+            <ul class="news_slider">
+              <li>
+                <article class="news_01">
+                  <h3 class="hide">코카콜라 쿡북 이벤트 카드</h3>
+                  <a
+                    href="https://www.coca-cola.com/kr/ko/offerings/brand-story/cooking-library"
+                  >
+                    <img
+                      src="images/news_01.png"
+                      alt="코카콜라 쿡북 소식 이미지"
+                  >
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article class="news_02">
+                  <h3 class="hide">신흥시장 이벤트 카드</h3>
+                  <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/shinheung-market">
+                    <img
+                      src="images/news_02.png"
+                      alt="신흥시장 이벤트 카드"
+                  >
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article class="news_03">
+                  <h3 class="hide">닥터페퍼 이벤트 카드</h3>
+                  <a href="https://www.coca-cola.com/kr/ko/offerings/opener/masism-drpepper-burgerking">
+                    <img
+                      src="images/news_03.png"
+                      alt="닥터페퍼 이벤트 카드"
+                  >
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article class="news_04">
+                  <h3 class="hide">나의 미식 파트너 카드</h3>
+                  <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/coke-meal-2025">
+                    <img
+                      src="images/news_04.png"
+                      alt="나의 미식 파트너 카드"
+                  >
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article class="news_05">
+                  <h3 class="hide">코카콜라와 뷔 카드</h3>
+                  <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/coca-cola_V">
+                    <img src="images/news_05.png" alt="코카콜라와 뷔 카드">
+                  </a>
+                </article>
+              </li>
+              <li>
+                <article class="news_06">
+                  <h3 class="hide">코카콜라 레드리본 카드</h3>
+                  <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/red-ribbon-2025">
+                    <img
+                      src="images/news_06.png"
+                      alt="코카콜라 레드리본 카드"
+                  >
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <a href="#none" class="prev">
+            <img src="images/arrow_prev.png" alt="이전">
+          </a>
+          <a href="#none" class="next">
+            <img src="images/arrow_next.png" alt="다음">
+          </a>
+        </div>
+      </section>
+
+      <section id="news_event_mobile" class="news_event_mobile">
+        <h2>News & Event</h2>
+        <div class="news_mobile_wrap">
+          <ul class="news_mobile_slider">
+            <li>
+              <div class="news_mobile_card">
+                <img
+                  src="images/news_m_01.png"
+                  alt="코카콜라 쿡북 이벤트 카드"
+                  class="news_mobile_img"
+              >
+                <a
+                  href="https://www.coca-cola.com/kr/ko/offerings/brand-story/cooking-library"
+                  class="news_mobile_link"
+                >
+                  <img
+                    src="images/news_m_btn.png"
+                    alt="보러가기"
+                    class="news_mobile_btn"
+                >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="news_mobile_card">
+                <img
+                  src="images/news_m_02.png"
+                  alt="신흥시장 이벤트 카드"
+                  class="news_mobile_img"
+              >
+                <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/shinheung-market" class="news_mobile_link">
+                  <img
+                    src="images/news_m_btn.png"
+                    alt="보러가기"
+                    class="news_mobile_btn"
+                >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="news_mobile_card">
+                <img
+                  src="images/news_m_03.png"
+                  alt="닥터페퍼 이벤트 카드"
+                  class="news_mobile_img"
+              >
+                <a href="https://www.coca-cola.com/kr/ko/offerings/opener/masism-drpepper-burgerking" class="news_mobile_link">
+                  <img
+                    src="images/news_m_btn.png"
+                    alt="보러가기"
+                    class="news_mobile_btn"
+                >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="news_mobile_card">
+                <img
+                  src="images/news_m_04.png"
+                  alt="나의 미식 파트너 카드"
+                  class="news_mobile_img"
+              >
+                <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/coke-meal-2025" class="news_mobile_link">
+                  <img
+                    src="images/news_m_btn.png"
+                    alt="보러가기"
+                    class="news_mobile_btn"
+                >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="news_mobile_card">
+                <img
+                  src="images/news_m_05.png"
+                  alt="코카콜라와 뷔 카드"
+                  class="news_mobile_img"
+              >
+                <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/coca-cola_V" class="news_mobile_link">
+                  <img
+                    src="images/news_m_btn.png"
+                    alt="보러가기"
+                    class="news_mobile_btn"
+                >
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="news_mobile_card">
+                <img
+                  src="images/news_m_06.png"
+                  alt="코카콜라 레드리본 카드"
+                  class="news_mobile_img"
+              >
+                <a href="https://www.coca-cola.com/kr/ko/offerings/brand-story/red-ribbon-2025" class="news_mobile_link">
+                  <img
+                    src="images/news_m_btn.png"
+                    alt="보러가기"
+                    class="news_mobile_btn"
+                >
+                </a>
+              </div>
+            </li>
+          </ul>
+          <div class="news_pager_custom" role="navigation" aria-label="뉴스 페이지"></div>
+          <a href="#none" class="news_prev"
+            ><img src="images/arrow_prev.png" alt="이전"
+        ></a>
+          <a href="#none" class="news_next"
+            ><img src="images/arrow_next.png" alt="다음"
+        ></a>
+        </div>
+      </section>
+    </main>
+    <button type="button" class="top_btn" aria-label="맨 위로 이동">
+      <span aria-hidden="true">↑</span>
+    </button>
+    <footer id="footer" class="footer">
+      <img
+        src="images/footer_bg.png"
+        alt="푸터 배너 이미지"
+        class="footer_bg"
+    >
+      <div class="footer_wrap">
+        <h2 class="footer_logo">
+          <img src="images/footer_logo.png" alt="푸터 로고">
+        </h2>
+
+        <nav class="site_guide">
+          <h2 class="hide">사이트 이용안내</h2>
+          <ul>
+            <li><a href="faq.html">• FAQ</a></li>
+            <li><a href="customer.html">• 고객안내</a></li>
+            <li><a href="contact.html">• 문의하기</a></li>
+            <li><a href="notice.html">• 공지사항</a></li>
+          </ul>
+        </nav>
+        <div class="footer_map_trigger_wrap">
+          <button type="button" class="footer_map_trigger" data-map-open="true">
+            오시는 길
+          </button>
+        </div>
+        <div class="policy_space"></div>
+
+        <div class="footer_text">
+          <p>
+            코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 페이지입니다.
+            <br>코카콜라를 통해 브랜드의 에너지와 즐거움을 느껴보세요.
+          </p>
+          <p><span>©2025 코카콜라. All rights reserved.</span></p>
+        </div>
+
+        <nav class="policy">
+          <ul>
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+        </nav>
+
+        <nav class="SNS" aria-label="SNS 바로가기">
+          <ul class="sns_list">
+            <li>
+              <a href="https://www.instagram.com/#" class="sns_link" aria-label="Instagram">
+                <img
+                  src="images/footer_sns_instagram.png"
+                  alt="인스타그램"
+              >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/openhappinesskorea" class="sns_link" aria-label="YouTube">
+                <img src="images/footer_sns_youtube.png" alt="유튜브">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/cocacolasouthkorea/?brand_redir=40796308305" class="sns_link" aria-label="Facebook">
+                <img src="images/footer_sns_facebook.png" alt="페이스북">
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/CocaCola_Korea" class="sns_link" aria-label="X">
+                <img src="images/footer_sns_x.png" alt="트위터">
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <img
+          src="images/footer_bear.png"
+          alt="푸터 곰 이미지"
+          class="footer_bear"
+      >
+      </div>
+    </footer>
+
+    <footer class="footer_tablet" id="footer_tablet">
+      <img
+        src="images/footer_bg_tablet.png"
+        alt="푸터 배너 이미지"
+        class="footer_bg_tablet"
+    >
+
+      <nav class="footer_quickbar" aria-label="푸터 빠른 메뉴">
+        <button type="button" class="footer_quickbtn" data-panel="gnb">
+          <span class="footer_quicklabel">고객센터</span>
+        </button>
+
+        <button type="button" class="footer_quickbtn" data-panel="policy">
+          <span class="footer_quicklabel">약관</span>
+        </button>
+
+        <button type="button" class="footer_quickbtn" data-panel="sns">
+          <span class="footer_quicklabel">SNS</span>
+        </button>
+        
+        <button type="button" class="footer_quickbtn" data-map-open="true">
+          <span class="footer_quicklabel">오시는 길</span>
+        </button>
+      </nav>
+
+      <div class="footer_panel" hidden>
+        <div class="panel_box" data-panel-box="gnb" hidden>
+          <ul class="panel_list">
+            <li><a href="faq.html">• FAQ</a></li>
+            <li><a href="customer.html">• 고객안내</a></li>
+            <li><a href="contact.html">• 문의하기</a></li>
+            <li><a href="notice.html">• 공지사항</a></li>
+          </ul>
+        </div>
+
+        <div class="panel_box" data-panel-box="policy" hidden>
+          <ul class="panel_list">
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+        </div>
+
+        <div class="panel_box" data-panel-box="sns" hidden>
+          <div class="sns_panel">
+            <a href="https://www.instagram.com/cocacola_korea/" class="sns_imglink" aria-label="Instagram">
+              <img src="images/footer_sns_instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.youtube.com/user/openhappinesskorea" class="sns_imglink" aria-label="YouTube">
+              <img src="images/footer_sns_youtube.png" alt="YouTube">
+            </a>
+
+            <a href="https://www.facebook.com/cocacolasouthkorea/?brand_redir=40796308305" class="sns_imglink" aria-label="Facebook">
+              <img src="images/footer_sns_facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://x.com/CocaCola_Korea" class="sns_imglink" aria-label="x">
+              <img src="images/footer_sns_x.png" alt="x">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        <h2 class="footer_logo_tablet">
+          <img src="images/footer_logo.png" alt="푸터 로고">
+        </h2>
+
+        <div class="footer_text_tablet">
+          <p>
+            코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 페이지입니다.
+            <br>코카콜라를 통해 브랜드의 에너지와 즐거움을 느껴보세요.
+          </p>
+          <p><span>©2025 코카콜라. All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+    <div class="map_modal_dim" id="mapModal" aria-hidden="true">
+      <div class="map_modal" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+        <div class="map_modal_head">
+          <h2 id="mapModalTitle" class="map_modal_title">오시는 길</h2>
+          <button type="button" class="map_modal_close" id="mapModalClose" aria-label="지도 닫기">✕</button>
+        </div>
+
+        <div class="map_modal_body">
+          <p class="map_modal_text">한국 코카-콜라 본사 위치</p>
+          <div id="kakaoMap"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4/dist/jquery.bxslider.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4/dist/jquery.bxslider.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f37a76a723dbf56449dfd403d883a10&libraries=services"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

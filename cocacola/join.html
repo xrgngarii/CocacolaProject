@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코카콜라 회원가입 페이지</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="회원가입 | 코카콜라 - Pure Joy">
+    <meta property="og:description" content="회원가입 UI를 구현한 Join 페이지입니다.">
+    <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/join.html">
+    <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_join.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="회원가입 | 코카콜라 - Pure Joy">
+    <meta name="twitter:description" content="회원가입 UI를 구현한 Join 페이지입니다.">
+    <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_join.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+    >
+    <link rel="stylesheet" href="css/join.css">
+  </head>
+  <body>
+    <main id="main" class="main">
+      <img
+        src="images/login_bg.png"
+        alt="로그인&회원가입 바탕 화면"
+        class="login_bg"
+      >
+
+      <form class="join_form" action="#none" method="post">
+        <fieldset>
+          <legend class="hide">회원가입</legend>
+
+          <h1 class="logo">
+            <a href="index.html" class="logo_link">
+              <img
+                src="images/cocacola_login_logo.png"
+                alt="코카콜라"
+                class="logo_default"
+              >
+              <img
+                src="images/cocacola_login_logo_hover.png"
+                alt=""
+                class="logo_hover"
+                aria-hidden="true"
+              >
+            </a>
+          </h1>
+
+          <div class="row row-id">
+            <div class="frame">
+              <label class="hide" for="join_id">아이디</label>
+              <input
+                class="inp"
+                type="text"
+                name="id"
+                id="join_id"
+                placeholder="아이디* (영문소문자/숫자, 4~16자)"
+                required
+              >
+            </div>
+            <button type="button" class="btn btn-idcheck">아이디 확인</button>
+          </div>
+
+          <div class="frame">
+            <label class="hide" for="join_pw">비밀번호</label>
+            <input
+              class="inp"
+              type="password"
+              name="pw"
+              id="join_pw"
+              placeholder="비밀번호* (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 8자~16자)"
+              required
+            >
+          </div>
+
+          <div class="frame">
+            <label class="hide" for="join_pw2">비밀번호 확인</label>
+            <input
+              class="inp"
+              type="password"
+              name="pw2"
+              id="join_pw2"
+              placeholder="비밀번호 확인*"
+              required
+            >
+          </div>
+
+          <div class="row row-addr">
+            <div class="frame">
+              <label class="hide" for="addr0">주소</label>
+              <input
+                class="inp"
+                type="text"
+                name="addr0"
+                id="addr0"
+                placeholder="주소"
+                readonly
+              >
+            </div>
+            <button type="button" class="btn btn-idcheck">우편번호</button>
+          </div>
+
+          <div class="frame">
+            <label class="hide" for="addr1">기본주소</label>
+            <input
+              class="inp"
+              type="text"
+              name="addr1"
+              id="addr1"
+              placeholder="기본주소"
+              readonly
+            >
+          </div>
+
+          <div class="frame">
+            <label class="hide" for="addr2">상세주소</label>
+            <input
+              class="inp"
+              type="text"
+              name="addr2"
+              id="addr2"
+              placeholder="나머지주소 (선택입력가능)"
+            >
+          </div>
+
+          <div class="row row-phone">
+            <div class="frame">
+              <label class="hide" for="tel_home1">일반전화 앞자리</label>
+              <input
+                class="inp"
+                type="text"
+                name="tel_home1"
+                id="tel_home1"
+                maxlength="3"
+                inputmode="numeric"
+              >
+            </div>
+            <div class="frame">
+              <label class="hide" for="tel_home2">일반전화 가운데자리</label>
+              <input
+                class="inp"
+                type="text"
+                name="tel_home2"
+                id="tel_home2"
+                maxlength="4"
+                placeholder="*일반전화"
+                inputmode="numeric"
+              >
+            </div>
+            <div class="frame">
+              <label class="hide" for="tel_home3">일반전화 끝자리</label>
+              <input
+                class="inp"
+                type="text"
+                name="tel_home3"
+                id="tel_home3"
+                maxlength="4"
+                inputmode="numeric"
+              >
+            </div>
+          </div>
+
+          <div class="row row-phone">
+            <div class="frame">
+              <label class="hide" for="tel_mobile1">휴대전화 앞자리</label>
+              <input
+                class="inp"
+                type="text"
+                name="tel_mobile1"
+                id="tel_mobile1"
+                maxlength="3"
+                inputmode="numeric"
+              >
+            </div>
+            <div class="frame">
+              <label class="hide" for="tel_mobile2">휴대전화 가운데자리</label>
+              <input
+                class="inp"
+                type="text"
+                name="tel_mobile2"
+                id="tel_mobile2"
+                maxlength="4"
+                placeholder="*휴대전화"
+                inputmode="numeric"
+              >
+            </div>
+            <div class="frame">
+              <label class="hide" for="tel_mobile3">휴대전화 끝자리</label>
+              <input
+                class="inp"
+                type="text"
+                name="tel_mobile3"
+                id="tel_mobile3"
+                maxlength="4"
+                inputmode="numeric"
+              >
+            </div>
+          </div>
+
+          <div class="row row-email">
+            <div class="frame">
+              <label class="hide" for="email1">이메일 아이디</label>
+              <input
+                class="inp"
+                type="text"
+                name="email1"
+                id="email1"
+                placeholder="이메일*"
+                required
+              >
+            </div>
+
+            <div class="frame">
+              <label class="hide" for="email2">이메일 도메인 직접입력</label>
+              <input
+                class="inp"
+                type="text"
+                name="email2"
+                id="email2"
+                placeholder=""
+              >
+            </div>
+
+            <div class="frame">
+              <label class="hide" for="email_domain_btn">이메일 도메인 선택</label>
+              <input type="hidden" id="email_domain" name="email_domain">
+
+              <div class="dropdown dropdown--email is-empty" data-dd="email">
+                <button
+                  type="button"
+                  class="dd_btn"
+                  id="email_domain_btn"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <span class="dd_text" data-dd-text>선택</span>
+                  <span class="dd_chev" aria-hidden="true"></span>
+                </button>
+
+                <ul
+                  class="dd_list"
+                  role="listbox"
+                  aria-label="이메일 도메인"
+                  tabindex="-1"
+                >
+                  <li role="option" class="dd_item" data-value="naver.com">naver.com</li>
+                  <li role="option" class="dd_item" data-value="daum.net">daum.net</li>
+                  <li role="option" class="dd_item" data-value="gmail.com">gmail.com</li>
+                  <li role="option" class="dd_item" data-value="hanmail.net">hanmail.net</li>
+                  <li role="option" class="dd_item" data-value="nate.com">nate.com</li>
+                  <li role="option" class="dd_item" data-value="custom">직접입력</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <label class="agree">
+            <input type="checkbox" name="agree_all" required>
+            <span class="agree_txt agree_txt--pc">
+              이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다. *
+            </span>
+            <span class="agree_txt agree_txt--m" aria-hidden="true">
+              이용약관·개인정보 수집/이용 동의 *
+            </span>
+          </label>
+
+          <div class="row row-bottom">
+            <button type="submit" class="btn btn-join">회원가입</button>
+            <button
+              type="button"
+              class="btn btn-cancel"
+              onclick="location.href='index.html'"
+            >
+              회원가입취소
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <script src="js/join.js"></script>
+  </body>
+</html>

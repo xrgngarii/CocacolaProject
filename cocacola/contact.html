@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코카콜라 문의하기</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="문의하기 | 코카콜라 - Pure Joy">
+    <meta property="og:description" content="포트폴리오 관련 문의를 남길 수 있는 Contact 페이지입니다.">
+    <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/contact.html">
+    <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_contact.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="문의하기 | 코카콜라 - Pure Joy">
+    <meta name="twitter:description" content="포트폴리오 관련 문의를 남길 수 있는 Contact 페이지입니다.">
+    <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_contact.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+    >
+    <link rel="stylesheet" href="css/contact.css">
+  </head>
+
+  <body>
+    <main class="main">
+      <img src="images/login_bg.png" alt="" class="login_bg">
+
+      <section class="info_card">
+        <h1 class="logo">
+          <a href="index.html" class="logo_link">
+            <img
+              src="images/cocacola_login_logo.png"
+              alt="코카콜라"
+              class="logo_default"
+            >
+            <img
+              src="images/cocacola_login_logo_hover.png"
+              alt=""
+              class="logo_hover"
+              aria-hidden="true"
+            >
+          </a>
+        </h1>
+
+        <h2 class="title">문의하기</h2>
+
+        <div class="section">
+          <div class="block">
+            <span class="label">주소</span>
+            <p class="value">
+              서울시 종로구 새문안로 68 흥국생명빌딩 18층<br>
+              한국 코카-콜라 (03184)
+            </p>
+          </div>
+
+          <div class="block">
+            <span class="label">코카-콜라 음료(주) 고객상담실</span>
+            <p class="value">
+              080-024-5999<br>
+              (상담 시간: 월 ~ 금 09:00 ~ 17:30)
+            </p>
+          </div>
+
+          <div class="block">
+            <span class="label">문의 폼</span>
+
+            <form class="form_grid" action="#none" method="post">
+              <div class="field">
+                <label class="hide" for="q_type_btn">문의 유형</label>
+                <input type="hidden" id="q_type" name="q_type">
+
+                <div class="dropdown is-empty" data-dd="qtype">
+                  <button
+                    type="button"
+                    class="dd_btn"
+                    id="q_type_btn"
+                    role="combobox"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                    aria-controls="q_type_list"
+                    aria-required="true"
+                  >
+                    <span class="dd_text" data-dd-text>문의 유형 선택*</span>
+                    <span class="dd_chev" aria-hidden="true"></span>
+                  </button>
+
+                  <ul
+                    class="dd_list"
+                    id="q_type_list"
+                    role="listbox"
+                    aria-label="문의 유형"
+                    tabindex="-1"
+                  >
+                    <li role="option" class="dd_item" data-value="product">제품/성분</li>
+                    <li role="option" class="dd_item" data-value="purchase">구매/유통</li>
+                    <li role="option" class="dd_item" data-value="event">이벤트/프로모션</li>
+                    <li role="option" class="dd_item" data-value="service">고객서비스</li>
+                    <li role="option" class="dd_item" data-value="etc">기타</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="hide" for="name">이름</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="이름*"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label class="hide" for="email">이메일</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="이메일*"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label class="hide" for="subject">제목</label>
+                <input
+                  id="subject"
+                  type="text"
+                  name="subject"
+                  placeholder="제목*"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label class="hide" for="message">문의 내용</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="문의 내용을 입력해 주세요*"
+                  required
+                ></textarea>
+              </div>
+
+              <p class="help_txt">
+                * 접수된 문의는 확인 후 순차적으로 답변됩니다.<br>
+                (상담 시간: 월 ~ 금 09:00 ~ 17:30)
+              </p>
+
+              <div class="btn_row">
+                <button type="submit" class="btn">문의 접수</button>
+                <button
+                  type="button"
+                  class="btn"
+                  onclick="location.href='customer.html'"
+                >
+                  고객 안내
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/contact.js"></script>
+  </body>
+</html>

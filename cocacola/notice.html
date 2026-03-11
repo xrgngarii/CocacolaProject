@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코카콜라 공지사항</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="공지사항 | 코카콜라 - Pure Joy">
+    <meta property="og:description" content="공지사항 리스트 UI를 구현한 Notice 페이지입니다.">
+    <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/notice.html">
+    <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_notice.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="공지사항 | 코카콜라 - Pure Joy">
+    <meta name="twitter:description" content="공지사항 리스트 UI를 구현한 Notice 페이지입니다.">
+    <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_notice.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css">
+    <link rel="stylesheet" href="css/notice.css">
+  </head>
+
+  <body>
+    <main class="main">
+      <img src="images/login_bg.png" alt="" class="login_bg">
+
+      <section class="info_card" aria-label="공지사항">
+        <h1 class="logo">
+          <a href="index.html" class="logo_link">
+            <img src="images/cocacola_login_logo.png" alt="코카콜라" class="logo_default">
+            <img src="images/cocacola_login_logo_hover.png" alt="" class="logo_hover" aria-hidden="true">
+          </a>
+        </h1>
+
+        <h2 class="title">공지사항</h2>
+
+        <div class="section">
+          <div class="toolbar" role="region" aria-label="공지 검색 및 필터">
+            <div class="search">
+              <svg class="search_icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.5 18.5a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path>
+                <path d="M16.5 16.5 21 21"></path>
+              </svg>
+              <label class="hide" for="q">공지 검색</label>
+              <input id="q" type="search" placeholder="예: 개인정보, 이벤트, 점검" autocomplete="off">
+            </div>
+
+            <div class="chips" role="group" aria-label="카테고리 필터">
+              <button type="button" class="chip" data-filter="all" aria-pressed="true">전체</button>
+              <button type="button" class="chip" data-filter="policy" aria-pressed="false">약관·정책</button>
+              <button type="button" class="chip" data-filter="event" aria-pressed="false">이벤트</button>
+              <button type="button" class="chip" data-filter="service" aria-pressed="false">서비스</button>
+            </div>
+
+            <div class="meta" aria-live="polite">
+              <span>표시 중 <strong id="count">0</strong>건</span>
+              <span id="hint">항목을 눌러 상세를 펼칠 수 있어요</span>
+            </div>
+          </div>
+
+          <div id="list" class="notice_list" role="list"></div>
+
+          <div id="empty" class="empty" hidden>
+            검색 조건에 맞는 공지사항이 없습니다.<br>
+            다른 키워드로 다시 시도해 주세요.
+          </div>
+
+          <div class="btn_row">
+            <button type="button" class="btn btn-customer" onclick="location.href='contact.html'">
+              문의하기
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/notice.js"></script>
+  </body>
+</html>

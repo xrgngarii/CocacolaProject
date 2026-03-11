@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코카콜라 로그인 페이지</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="로그인 | 코카콜라 - Pure Joy">
+    <meta property="og:description" content="로그인 UI를 구현한 Login 페이지입니다.">
+    <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/login.html">
+    <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_login.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="로그인 | 코카콜라 - Pure Joy">
+    <meta name="twitter:description" content="로그인 UI를 구현한 Login 페이지입니다.">
+    <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_login.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css"
+    >
+    <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <main id="main" class="main">
+      <img
+        src="images/login_bg.png"
+        alt="로그인 바탕 화면"
+        class="login_bg"
+      >
+
+      <form class="login_form" action="#" method="post">
+        <fieldset>
+          <legend class="hide">로그인</legend>
+
+          <h1 class="logo">
+            <a href="index.html" class="logo_link">
+              <img
+                src="images/cocacola_login_logo.png"
+                alt="코카콜라 로그인 로고"
+                class="logo_default"
+              >
+              <img
+                src="images/cocacola_login_logo_hover.png"
+                alt=""
+                class="logo_hover"
+                aria-hidden="true"
+              >
+            </a>
+          </h1>
+
+          <div class="input_group">
+            <label class="hide" for="login_id">아이디</label>
+            <input
+              type="text"
+              id="login_id"
+              name="id"
+              placeholder="ID"
+              autocomplete="username"
+              required
+            >
+          </div>
+
+          <div class="input_group">
+            <label class="hide" for="login_pw">비밀번호</label>
+            <input
+              type="password"
+              id="login_pw"
+              name="pw"
+              placeholder="PW"
+              autocomplete="current-password"
+              required
+            >
+          </div>
+
+          <div class="login_action">
+            <label class="save_id">
+              <input type="checkbox" name="save_id" value="Y">
+              <span>아이디 저장</span>
+            </label>
+
+            <button
+              type="submit"
+              class="login_btn"
+              id="loginBtn"
+              aria-label="로그인"
+            >
+              로그인
+            </button>
+          </div>
+
+          <div class="login_links">
+            <a href="#" onclick="return false;">비밀번호 찾기</a>
+            <a href="join.html">회원가입</a>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>contents</title>
+
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="Contents | 코카콜라 - Pure Joy">
+      <meta property="og:description" content="영상/캠페인 콘텐츠를 카드형 UI와 인터랙션으로 구성한 Contents 페이지입니다.">
+      <meta property="og:url" content="https://tkdcjdyd8382.dothome.co.kr/contents.html">
+      <meta property="og:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_contents.png">
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="Contents | 코카콜라 - Pure Joy">
+      <meta name="twitter:description" content="영상/캠페인 콘텐츠를 카드형 UI와 인터랙션으로 구성한 Contents 페이지입니다.">
+      <meta name="twitter:image" content="https://tkdcjdyd8382.dothome.co.kr/images/og_contents.png">
+
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+      <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+      <link rel="stylesheet" href="css/contents.css">
+    </head>
+  <body>
+    <div class="skip_menu">
+      <a href="#gnb">주요메뉴 바로가기</a>
+      <a href="#brand">브랜드 바로가기</a>
+      <a href="#limited">코카콜라 한정판 제품 바로가기</a>
+      <a href="#sustainability">지속 가능성 바로가기</a>
+      <a href="#news_event_section">뉴스 및 이벤트 바로가기</a>
+      <a href="#footer">하단메뉴 바로가기</a>
+    </div>
+    <div class="header_wrap">
+      <header id="header" class="header header--solid">
+        <button type="button" class="menu_btn" aria-label="메뉴 열기">
+          <img src="images/header_btn.png" alt="">
+        </button>
+        <h1 class="logo">
+          <a href="index.html" class="logo_link">
+            <img
+              src="images/cocacola_logo.png"
+              alt="코카콜라 로고"
+              class="logo_default"
+          >
+            <img
+              src="images/cocacola_logo_hover.png"
+              alt=""
+              class="logo_hover"
+              aria-hidden="true"
+          >
+          </a>
+        </h1>
+        <nav id="gnb" class="gnb">
+          <h2 class="hide">주요 메뉴</h2>
+          <ul class="depth1">
+            <li><a href="company.html">Company</a></li>
+            <li><a href="brand.html">Brand</a></li>
+            <li><a href="sustainability.html">Sustainability</a></li>
+            <li><a href="contents.html">Contents</a></li>
+            <li><a href="goods.html">Goods</a></li>
+          </ul>
+        </nav>
+        <div class="top_menu">
+          <h2 class="hide">유틸 메뉴</h2>
+          <ul>
+            <li><a href="#none">•한국어</a></li>
+            <li>
+              <a href="login.html">•LOGIN</a>
+            </li>
+            <li><a href="join.html">•JOIN</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <input type="checkbox" id="search_toggle" class="hide">
+          <label for="search_toggle" class="search_icon">
+            <img src="images/search.png" alt="검색" class="icon_pc">
+            <img
+              src="images/tablet_search.png"
+              alt="검색"
+              class="icon_tab"
+          >
+          </label>
+          <form class="search_form" id="searchForm">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+          </form>
+        </div>
+      </header>
+    </div>
+    <nav class="menu_layer_tablet">
+      <button type="button" class="menu_close" aria-label="메뉴 닫기">✕</button>
+
+      <ul class="depth1">
+        <li><a href="company.html" class="depth1_btn">Company</a></li>
+        <li><a href="brand.html" class="depth1_btn">Brand</a></li>
+        <li><a href="sustainability.html" class="depth1_btn">Sustainability</a></li>
+        <li><a href="contents.html" class="depth1_btn">Contents</a></li>
+        <li><a href="goods.html" class="depth1_btn">Goods</a></li>
+      </ul>
+
+      <div class="tablet_util">
+        <a href="login.html" class="util_link">LOGIN</a>
+        <a href="join.html" class="util_link">JOIN</a>
+      </div>
+
+      <div class="tablet_util2">
+        <ul>
+          <li><a href="faq.html">• FAQ</a></li>
+          <li><a href="customer.html">• 고객안내</a></li>
+          <li><a href="contact.html">• 문의하기</a></li>
+          <li><a href="notice.html">• 공지사항</a></li>
+          <li><a href="#none" class="menu_map_link" data-map-open="true">• 오시는 길</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="menu_dim"></div>
+
+    <main id="main" class="main">
+      <section class="contents_hero">
+        <div class="contents_bg">
+          <picture>
+            <source media="(max-width: 1194px)" srcset="images/contents_bg_mobile.png">
+            <img src="images/contents_bg.png" alt="Contents 메인 배너">
+          </picture>
+        </div>
+
+        <div class="hero_text" aria-hidden="false">
+          <div class="hero_text_inner"
+              data-aos="fade-up"
+              data-aos-duration="1800"
+              data-aos-delay="150"
+              data-aos-easing="ease-out-cubic">
+            <h2 class="hero_title">Contents</h2>
+            <p class="hero_desc">“코카-콜라, 순간을 더 특별하게 만드는 콘텐츠 경험.”</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick_nav" aria-label="Contents 섹션 바로가기">
+        <div class="quick_nav_inner">
+          <a class="quick_nav_btn" href="#rc_contents">추천 콘텐츠</a>
+          <a class="quick_nav_btn" href="#pop_contents">인기 콘텐츠</a>
+        </div>
+      </section>
+
+      <section class="rc_contents" id="rc_contents" data-aos="fade-up">
+        <h2>추천 콘텐츠</h2>
+        <div class="rc_slider" id="rc_slider">
+          <button type="button" class="rc_btn rc_prev" aria-label="이전">
+            <img src="images/arrow_prev.png" alt="이전">
+          </button>
+          <div class="rc_view">
+            <ul class="rc_track"></ul>
+          </div>
+          <button type="button" class="rc_btn rc_next" aria-label="다음">
+            <img src="images/arrow_next.png" alt="다음">
+          </button>
+        </div>
+        <div class="rc_contents_wrap1">
+          <a
+            href="#none"
+            class="video_thumb"
+            data-video="https://www.youtube.com/embed/O1akV85y2nY?autoplay=1&mute=1&rel=0"
+          >
+            <img src="images/contents_video1.png" alt="추천콘텐츠 영상1">
+          </a>
+          <a
+            href="#none"
+            class="video_thumb"
+            data-video="https://www.youtube.com/embed/4CfL9IjYUQo?autoplay=1&mute=1&rel=0"
+          >
+            <img src="images/contents_video2.png" alt="추천콘텐츠 영상2">
+          </a>
+        </div>
+        <div class="rc_contents_wrap2">
+          <a
+            href="#none"
+            class="video_thumb"
+            data-video="https://www.youtube.com/embed/7mLJmXuORk0?autoplay=1&mute=1&rel=0"
+          >
+            <img src="images/contents_video3.png" alt="추천콘텐츠 영상3">
+          </a>
+          <a
+            href="#none"
+            class="video_thumb"
+            data-video="https://www.youtube.com/embed/uT3OZ6tKNYo?autoplay=1&mute=1&rel=0"
+          >
+            <img src="images/contents_video4.png" alt="추천콘텐츠 영상4">
+          </a>
+        </div>
+      </section>
+      <section class="pop_contents" id="pop_contents" data-aos="fade-up">
+        <h2>인기 콘텐츠</h2>
+        <div class="pop_contents_wrap">
+          <h3>
+            코카콜라 대학 스포츠 캠페인,<br>
+            원정팀 팬들의 '가장 목마른 행동'에 경의를 표하다
+          </h3>
+          <div
+            class="pop_contents_player"
+            id="popPlayer"
+            data-video="https://www.youtube.com/embed/MJ0lgc5ihL0?autoplay=1&mute=1&rel=0&playsinline=1"
+          >
+            <img
+              class="pop_poster"
+              src="images/pop_contents_video.png"
+              alt="인기콘텐츠 영상 썸네일"
+          >
+            <button
+              type="button"
+              class="video_play"
+              aria-label="인기 콘텐츠 영상 재생"
+            >
+              ▶
+            </button>
+          </div>
+          <div class="pop_contents_text1">
+            <h4>2025년 9월 15일</h4>
+            <p>
+              코카콜라는 이번 시즌에도 대학 미식축구의 "최고의 팬들"을 기리며,
+              전국의 대학 캠퍼스에 코카콜라와 코카콜라 제로 슈거의 훌륭한 맛을
+              선사합니다. 브랜드의 세 번째 가을 스포츠 캠페인은 종종 간과되는
+              집단, 바로 원정팀 팬들을 기념합니다. 이들은 홈에서 멀리 떨어진
+              낯선 곳으로 이동하여 경기장 밖에서 열정적인 응원을 펼치며 "가장
+              힘든 일"을 해냅니다. “Fan the Distance”라는 제목의 새로운 TV
+              광고는 원정 팬들이 경기장까지 이동하는 여정, 즉 길에서 경기장
+              좌석까지 이어지는 열정적인 모습과 그 과정에 서 코카콜라와 코카콜라
+              제로 슈거가 보여주는 상쾌한 역할을 조명합니다. 코카콜라의 NCAA
+              파트너 대학들이 출연하는 이 광고는 8월 25일에 공개되었습니다. 축구
+              경기장 위에 축구공이 있는 코카콜라와 코카콜라 제로 슈거 캔. "팬
+              활동은 목마른 활동이다"라는 문구가 적혀 있다.
+            </p>
+          </div>
+          <div class="pop_contents_text2">
+            <p>
+              대학 미식축구 팬들은 공동체 의식, 유산, 가족, 동문 네트워크,
+              고향과의 유대감을 통해 전해지는 자부심 덕분에 모든 스포츠 팬들
+              중에서도 가장 열정적인 팬들로 꼽힙니다. 이 러한 유대감은 경기장을
+              넘어 훨씬 더 깊은 곳까지 이어집니다. "팬 활동은 열정적인
+              노력이다"라는 슬로건은 대학 미식축구 팬덤이 진정한 헌신을
+              요구한다는 생각을 기리는 것 입니다. 경기장 밖에서 파티를 즐기는
+              것부터 경기장에서 응원하는 것, 집에서 모든 경기를 시청하는 것까지,
+              시원한 코카콜라 오리지널 테이스트나 코카콜라 제로 슈거는 친숙 하고
+              상쾌한 동반자입니다.”라고 코카콜라 북미 법인 코카콜라 상표 담당
+              부사장 스테이시 잭슨은 말했습니다. “바로 이것이 코카콜라가 대학
+              미식축구에서 진정성 있는 역할을 하는 이유입니다. 코카콜라는 여러
+              세대에 걸쳐 팬들과 함께하며 사람들을 하나로 모으고, 스포츠를
+              정의하는 열정, 에너지, 그리고 유대감의 순간들을 만들어
+              왔습니다.”2025 년 캠페인은 디지털 및 소셜 미디어 활동, 유료 미디어
+              파트너십, 제품 포장 및 경기장 내 프로모션, 옥외 광고, 그리고
+              쇼핑객 참여형 이벤트 등을 포함합니다. "팬으로서의 활동 은 갈증
+              해소" 투어는 시즌 동안 53개 파트너 학교 캠퍼스에서 시원한
+              코카콜라와 코카콜라 제로 슈거를 제공할 예정입니다. 이 체험형
+              샘플링 투어는 일부 프로 미식축구 경기 장 앞 주차장에서도 진행될
+              것입니다.
+            </p>
+          </div>
+          <div class="pop_contents_text3">
+            <p>
+              주말 빅 게임을 앞둔 매주 금요일,
+              www.coca-cola.com/us/en/offerings/fan-work/football 에 등록한
+              팬들은 SMS 또는 이메일 알림을 받게 되며, 로그인하면 특별 제 작
+              상품, 상품권, 좋아하는 팀 경기 관람권 등 다양한 경품에 당첨될
+              기회를 얻을 수 있습니다. 코카콜라 및 코카콜라 제로 슈거 패키지에
+              있는 QR 코드를 스캔하면 당첨 확률이 두 배로 높아집니다. 참여
+              경기장의 매점에서는 한정판 코카콜라 및 코카콜라 제로 슈거 가을
+              축구 컵을 판매하며, 스크래치 카드를 통해 더 많은 경품 당첨 기회를
+              제공합니다.
+            </p>
+          </div>
+        </div>
+        <div class="pop_contents_wrap2">
+          <h3>
+            [홈 가드닝 프로젝트]<br>
+            더 예쁘게 집콕!<br>
+            코카-콜라로 인테리어 도전!
+          </h3>
+          <div class="pop_contents_cont">
+            <img
+              src="images/pop_contents_img1.png"
+              alt="인기콘텐츠 이미지1"
+          >
+            <div class="pop_contents_text4">
+              <p>옛말에 이런 말이 있다.</p>
+              <p>호랑이는 죽어서 가죽을 남긴다고.</p>
+              <p>그렇다면 코카-콜라는 죽어서 무엇을 남길까?</p>
+              <p>레트로풍이 대세가 된 인테리어 시장에서,</p>
+              <p>코카-콜라의 가치는 남다르다.</p>
+              <p>그 순간이 바로 코카-콜라의 인생 2막 시작이다.</p>
+              <p>빈티지를 원한다면,우리에겐 죽어서까지 제 몫을 다하는</p>
+              <p>살신성인 자세의 코카-콜라가 있잖아!</p>
+            </div>
+          </div>
+          <img
+            class="pop_contents_img2"
+            src="images/pop_contents_img2.png"
+            alt="인기콘텐츠 이미지2"
+        >
+          <div class="pop_contents_text5">
+            <h4>코카-콜라를 활용한 카메라 모형, 배 작품도 만나보자.</h4>
+            <p>
+              여기, 전구부터 카메라 모형, 배까지 직접 따라 하긴 어렵지만 보기만
+              해도 눈 호강하는 코카-콜라를 활용한 작품도 만나보자.
+            </p>
+            <p>
+              우리 삶에 밀접하게 맞닿아 있는 친구같은 코카-콜라. 그러니 음료라는
+              개념으로만 접근한다면 섭섭할 것이다.
+            </p>
+            <p>코카-콜라는 더 많은 가치를 갖고 있으니까.</p>
+            <p>앞서도 언급했듯이, 호랑이는 죽어서 가죽을 남긴다고 했다.</p>
+            <p>그렇다면 코카-콜라는?</p>
+            <p>이 글을 읽은 사람들이라면 이제 정답을 잘 알고 있다.</p>
+            <p>
+              그러니 하루라도 빨리, 코카-콜라로 나만의 공간을 꾸미러 가보자!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <button type="button" class="top_btn" aria-label="맨 위로 이동">
+      <span aria-hidden="true">↑</span>
+    </button>
+    <footer id="footer" class="footer">
+      <img
+        src="images/footer_bg.png"
+        alt="푸터 배너 이미지"
+        class="footer_bg"
+    >
+      <div class="footer_wrap">
+        <h2 class="footer_logo">
+          <img src="images/footer_logo.png" alt="푸터 로고">
+        </h2>
+
+        <nav class="site_guide">
+          <h2 class="hide">사이트 이용안내</h2>
+          <ul>
+            <li><a href="faq.html">• FAQ</a></li>
+            <li><a href="customer.html">• 고객안내</a></li>
+            <li><a href="contact.html">• 문의하기</a></li>
+            <li><a href="notice.html">• 공지사항</a></li>
+          </ul>
+        </nav>
+        <div class="footer_map_trigger_wrap">
+          <button type="button" class="footer_map_trigger" data-map-open="true">
+            오시는 길
+          </button>
+        </div>
+        <div class="policy_space"></div>
+
+        <div class="footer_text">
+          <p>
+            코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 페이지입니다.
+            <br>코카콜라를 통해 브랜드의 에너지와 즐거움을 느껴보세요.
+          </p>
+          <p><span>©2025 코카콜라. All rights reserved.</span></p>
+        </div>
+
+        <nav class="policy">
+          <ul>
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+        </nav>
+
+        <nav class="SNS" aria-label="SNS 바로가기">
+          <ul class="sns_list">
+            <li>
+              <a href="https://www.instagram.com/#" class="sns_link" aria-label="Instagram">
+                <img
+                  src="images/footer_sns_instagram.png"
+                  alt="인스타그램"
+              >
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/user/openhappinesskorea" class="sns_link" aria-label="YouTube">
+                <img src="images/footer_sns_youtube.png" alt="유튜브">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/cocacolasouthkorea/?brand_redir=40796308305" class="sns_link" aria-label="Facebook">
+                <img src="images/footer_sns_facebook.png" alt="페이스북">
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/CocaCola_Korea" class="sns_link" aria-label="X">
+                <img src="images/footer_sns_x.png" alt="트위터">
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <img
+          src="images/footer_bear.png"
+          alt="푸터 곰 이미지"
+          class="footer_bear"
+      >
+      </div>
+    </footer>
+
+    <footer class="footer_tablet" id="footer_tablet">
+      <img
+        src="images/footer_bg_tablet.png"
+        alt="푸터 배너 이미지"
+        class="footer_bg_tablet"
+    >
+
+      <nav class="footer_quickbar" aria-label="푸터 빠른 메뉴">
+        <button type="button" class="footer_quickbtn" data-panel="gnb">
+          <span class="footer_quicklabel">고객센터</span>
+        </button>
+
+        <button type="button" class="footer_quickbtn" data-panel="policy">
+          <span class="footer_quicklabel">약관</span>
+        </button>
+
+        <button type="button" class="footer_quickbtn" data-panel="sns">
+          <span class="footer_quicklabel">SNS</span>
+        </button>
+
+        <button type="button" class="footer_quickbtn" data-map-open="true">
+          <span class="footer_quicklabel">오시는 길</span>
+        </button>
+      </nav>
+
+      <div class="footer_panel" hidden>
+        <div class="panel_box" data-panel-box="gnb" hidden>
+          <ul class="panel_list">
+            <li><a href="faq.html">• FAQ</a></li>
+            <li><a href="customer.html">• 고객안내</a></li>
+            <li><a href="contact.html">• 문의하기</a></li>
+            <li><a href="notice.html">• 공지사항</a></li>
+          </ul>
+        </div>
+
+        <div class="panel_box" data-panel-box="policy" hidden>
+          <ul class="panel_list">
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+          </ul>
+        </div>
+
+        <div class="panel_box" data-panel-box="sns" hidden>
+          <div class="sns_panel">
+            <a href="https://www.instagram.com/cocacola_korea/" class="sns_imglink" aria-label="Instagram">
+              <img src="images/footer_sns_instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.youtube.com/user/openhappinesskorea" class="sns_imglink" aria-label="YouTube">
+              <img src="images/footer_sns_youtube.png" alt="YouTube">
+            </a>
+
+            <a href="https://www.facebook.com/cocacolasouthkorea/?brand_redir=40796308305" class="sns_imglink" aria-label="Facebook">
+              <img src="images/footer_sns_facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://x.com/CocaCola_Korea" class="sns_imglink" aria-label="x">
+              <img src="images/footer_sns_x.png" alt="x">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer_bottom">
+        <h2 class="footer_logo_tablet">
+          <img src="images/footer_logo.png" alt="푸터 로고">
+        </h2>
+
+        <div class="footer_text_tablet">
+          <p>
+            코카콜라의 역사와 가치를 현대적으로 재해석한 리뉴얼 페이지입니다.
+            <br>코카콜라를 통해 브랜드의 에너지와 즐거움을 느껴보세요.
+          </p>
+          <p><span>©2025 코카콜라. All rights reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+    <div class="map_modal_dim" id="mapModal" aria-hidden="true">
+      <div class="map_modal" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+        <div class="map_modal_head">
+          <h2 id="mapModalTitle" class="map_modal_title">오시는 길</h2>
+          <button type="button" class="map_modal_close" id="mapModalClose" aria-label="지도 닫기">✕</button>
+        </div>
+
+        <div class="map_modal_body">
+          <p class="map_modal_text">한국 코카-콜라 본사 위치</p>
+          <div id="kakaoMap"></div>
+        </div>
+      </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f37a76a723dbf56449dfd403d883a10&libraries=services"></script>
+<script src="js/contents.js"></script>
+  </body>
+</html>
