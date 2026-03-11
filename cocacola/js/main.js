@@ -778,6 +778,23 @@ $(function () {
   const btnClose = document.getElementById("pfNoticeClose");
   const btnLater = document.getElementById("pfNoticeLater");
   const btnOk = document.getElementById("pfNoticeOk");
+  const todayCheck = document.getElementById("pfNoticeToday");
+  const storageKey = "pfNoticeHideUntil";
+
+  function getTodayEndTime() {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0).getTime();
+  }
+
+  function shouldHideToday() {
+    const saved = localStorage.getItem(storageKey);
+    if (!saved) return false;
+    return Date.now() < Number(saved);
+  }
+
+  function saveHideToday() {
+    localStorage.setItem(storageKey, String(getTodayEndTime()));
+  }
 
   function open() {
     popup.classList.add("is-open");
@@ -792,10 +809,11 @@ $(function () {
   }
 
   function handleClose() {
+    if (todayCheck && todayCheck.checked) {
+      saveHideToday();
+    }
     close();
   }
-
-  close();
 
   if (btnClose) btnClose.addEventListener("click", handleClose);
   if (btnLater) btnLater.addEventListener("click", handleClose);
@@ -810,6 +828,12 @@ $(function () {
       handleClose();
     }
   });
+
+  if (shouldHideToday()) {
+    close();
+  } else {
+    open();
+  }
 })();
 
 $(function () {
