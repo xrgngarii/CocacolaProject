@@ -778,6 +778,22 @@ $(function () {
   const btnClose = document.getElementById("pfNoticeClose");
   const btnLater = document.getElementById("pfNoticeLater");
   const btnOk = document.getElementById("pfNoticeOk");
+  const hideToday = document.getElementById("pfNoticeHideToday");
+
+  const STORAGE_KEY = "pfNoticeHideUntil";
+  const now = new Date();
+  const savedUntil = localStorage.getItem(STORAGE_KEY);
+
+  function shouldHideToday() {
+    if (!savedUntil) return false;
+    return now.getTime() < Number(savedUntil);
+  }
+
+  function setHideToday() {
+    const expire = new Date();
+    expire.setHours(23, 59, 59, 999);
+    localStorage.setItem(STORAGE_KEY, String(expire.getTime()));
+  }
 
   function open() {
     popup.classList.add("is-open");
@@ -792,10 +808,17 @@ $(function () {
   }
 
   function handleClose() {
+    if (hideToday && hideToday.checked) {
+      setHideToday();
+    }
     close();
   }
 
-  open();
+  if (!shouldHideToday()) {
+    open();
+  } else {
+    close();
+  }
 
   if (btnClose) btnClose.addEventListener("click", handleClose);
   if (btnLater) btnLater.addEventListener("click", handleClose);
