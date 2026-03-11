@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>신입 웹 퍼블리셔 김용현 | 포트폴리오</title>
+
+  <meta name="description" content="웹 퍼블리셔 용현의 포트폴리오 이력서입니다. 반응형, 접근성(ARIA), 스크롤/슬라이드 인터랙션(AOS, bxSlider 등)을 중심으로 제작했습니다.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="용현 | 웹 퍼블리셔 포트폴리오">
+  <meta property="og:description" content="반응형 · 접근성(ARIA) · 인터랙션 구현 중심 포트폴리오 이력서">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:image" content="https://example.com/og.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+
+  <link href="css/life.css" rel="stylesheet">
+
+  <style>
+    .hero_identity_photo {
+      width: 180px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="scroll_progress" aria-hidden="true"></div>
+
+  <nav class="top_quick_nav" aria-label="포트폴리오 바로가기">
+    <div class="top_quick_nav_inner">
+      <a href="#s1" class="quick_link is-active" data-target="#s1" aria-current="true">Intro</a>
+      <a href="#s2" class="quick_link" data-target="#s2">Profile</a>
+      <a href="#s3" class="quick_link" data-target="#s3">Skils</a>
+      <a href="#s4" class="quick_link" data-target="#s4">Web Project</a>
+    </div>
+  </nav>
+
+  <section class="intro swctallax" id="s1" tabindex="-1" aria-label="인트로">
+    <div class="center intro_center">
+
+      <div class="intro_visual">
+        <p class="intro_kicker">PORTFOLIO</p>
+        <h1 class="intro_title intro_title_sequence">
+          <span class="intro_line">
+            <span class="intro_word">LED</span>
+            <span class="intro_word">BY</span>
+            <span class="intro_word">EMPATHY,</span>
+          </span>
+          <span class="intro_line">
+            <span class="intro_word">DRIVEN</span>
+            <span class="intro_word">BY</span>
+            <span class="intro_word">EXPERIENCE</span>
+          </span>
+        </h1>
+        <p class="intro_message">공감에서 시작해, 더 나은 경험으로 완성합니다.</p>
+
+        <p class="intro_desc">웹 디자이너 겸 퍼블리셔 김용현의 포트폴리오입니다.</p>
+
+        <div class="intro_cta">
+          <a href="#s2" class="intro_chip" data-target="#s2">프로필 보기</a>
+          <a href="#s3" class="intro_chip" data-target="#s4">프로젝트 보기</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="top swctallax" id="s2" tabindex="-1" aria-label="프로필">
+    <div class="center">
+      <header class="hero">
+        <div class="hero_main">
+          <div class="hero_identity">
+            <div class="hero_identity_photo">
+              <img src="img/my_photo.jpg" alt="김용현 증명사진">
+            </div>
+
+            <div class="hero_identity_text">
+              <h2 class="hero_profile_title">Profile</h2>
+
+              <div class="hero_info" aria-label="기본 정보">
+                <ul class="hero_info_list">
+                  <li>
+                    <span class="hero_info_label">Name :</span>
+                    <strong class="hero_info_value">김용현 / Yonghyeon Kim</strong>
+                  </li>
+                  <li>
+                    <span class="hero_info_label">Date Of Birth :</span>
+                    <strong class="hero_info_value">1998. 09. 01</strong>
+                  </li>
+                  <li>
+                    <span class="hero_info_label">Tel :</span>
+                    <strong class="hero_info_value">010-2343-8382</strong>
+                  </li>
+                  <li>
+                    <span class="hero_info_label">E-mail :</span>
+                    <strong class="hero_info_value">tkdcjdyd8382@naver.com</strong>
+                  </li>
+                  <li>
+                    <span class="hero_info_label">Job :</span>
+                    <strong class="hero_info_value">웹 디자이너 · 웹 퍼블리셔</strong>
+                  </li>
+                  <li>
+                    <span class="hero_info_label">MBTI :</span>
+                    <strong class="hero_info_value">ESFJ</strong>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <ul class="meta" aria-label="연락처 및 링크">
+            <li><a href="https://github.com/your-id" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://example.com" target="_blank" rel="noreferrer">Portfolio</a></li>
+          </ul>
+
+          <div class="summary" aria-label="요약">
+            <p>맡겨주시면 결과로 증명합니다.</p>
+            <p>반응형·접근성·인터랙션까지 디테일하게 끝까지 마감합니다.</p>
+          </div>
+        </div>
+
+        <aside class="hero_side" aria-label="경력사항">
+          <div class="career_box reveal_left">
+            <h3>Career</h3>
+            <ul class="career_timeline">
+              <li>
+                <span class="career_date">2009.09 -</span>
+                <span class="career_text">한자급수자격검정 3급 취득</span>
+              </li>
+              <li>
+                <span class="career_date">2012.03 ~ 2017.02 -</span>
+                <span class="career_text">명석고등학교 졸업</span>
+              </li>
+              <li>
+                <span class="career_date">2016.12 -</span>
+                <span class="career_text">2종보통운전면허 취득</span>
+              </li>
+              <li>
+                <span class="career_date">2017.03 ~ 2023.02 -</span>
+                <span class="career_text">동국대학교(경주) 안전공학과 졸업</span>
+              </li>
+              <li>
+                <span class="career_date">2021.03 ~ 2023.09 -</span>
+                <span class="career_text">황남옥수수 매장매니저 근무</span>
+              </li>
+              <li>
+                <span class="career_date">2024.01 ~ 2024.04 -</span>
+                <span class="career_text">주식회사 서울랜드 안전관리팀 사원 · 안전관리자 근무</span>
+              </li>
+              <li>
+                <span class="career_date">2024.05 ~ 2025.05 -</span>
+                <span class="career_text">아토커피 논현점 카페매니저 근무</span>
+              </li>
+              <li>
+                <span class="career_date">2025.10 ~ 2026.03 -</span>
+                <span class="career_text">UI/UX 반응형 웹디자인&웹퍼블리셔(디자인&코딩) 양성 과정 수료</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </header>
+    </div>
+  </section>
+
+  <section class="middle swctallax" id="s3" tabindex="-1" aria-label="웹 프로젝트">
+    <div class="center">
+      <h2>Skils</h2>
+
+      <div class="stack_grid" role="list" aria-label="기술 스택">
+        <div class="card_wrap card_wrap_pub" role="listitem">
+          <div class="card reveal_left">
+            <h3>Publishing</h3>
+            <ul class="list">
+              <li>HTML5 · 시맨틱 마크업</li>
+              <li>CSS3 · 반응형(clamp) · 레이아웃</li>
+              <li>접근성(ARIA) · 키보드 포커스</li>
+            </ul>
+          </div>
+
+          <div class="card_icons_out" aria-hidden="true">
+            <img class="icon_html" src="img/icon_html.svg" alt="">
+            <img src="img/icon_css.svg" alt="">
+          </div>
+        </div>
+
+        <div class="card_wrap" role="listitem">
+          <div class="card reveal_left">
+            <h3>Interaction</h3>
+            <ul class="list">
+              <li>JavaScript · jQuery</li>
+              <li>스크롤/슬라이드 인터랙션 구현</li>
+              <li>모션 패턴 통일(ex: fade-up)</li>
+            </ul>
+          </div>
+
+          <div class="card_icons_out" aria-hidden="true">
+            <img src="img/icon_js.svg" alt="">
+            <img class="icon_jquery" src="img/icon_jquery.svg" alt="">
+          </div>
+        </div>
+
+        <div class="card_wrap" role="listitem">
+          <div class="card reveal_left">
+            <h3>Tooling</h3>
+            <ul class="list">
+              <li>Photoshop · Illustrator</li>
+              <li>Figma</li>
+              <li>OS 활용(Windows/macOS) · GitHub</li>
+            </ul>
+          </div>
+
+          <div class="card_icons_out" aria-hidden="true">
+            <img src="img/icon_ps.svg" alt="">
+            <img src="img/icon_ai.svg" alt="">
+            <img src="img/icon_figma.svg" alt="">
+            <img src="img/icon_os.svg" alt="">
+            <img class="icon_github" src="img/icon_github.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom swctallax" id="s4" tabindex="-1" aria-label="디자인 프로젝트">
+    <div class="center">
+      <h2>Web Project</h2>
+
+      <div class="work_grid" role="list" aria-label="프로젝트 목록">
+        <article class="work_card reveal_left" role="listitem" aria-label="코카콜라 웹디자인 리뉴얼">
+          <div class="work_main">
+            <div class="work_head">
+              <h3>코카콜라 웹디자인 리뉴얼</h3>
+              <p>반응형 웹 · 인터랙션 · 접근성</p>
+            </div>
+
+            <div class="work_body" aria-label="프로젝트 요약">
+              <dl class="work_kv">
+                <div class="kv_row">
+                  <dt>사용언어 및 도구</dt>
+                  <dd>HTML, CSS, JavaScript, jQuery</dd>
+                </div>
+              </dl>
+
+              <h4 class="work_sec">프로젝트 설명</h4>
+              <ul class="list">
+                <li>사용자 분석·벤치마킹을 바탕으로 정보 구조와 화면 흐름 정리</li>
+                <li>PC/태블릿/모바일 분기점별 UI 및 인터랙션 구현</li>
+                <li>서브페이지 구조화 및 컴포넌트 단위 퍼블리싱 진행</li>
+                <li>접근성(키보드 포커스, ARIA) 반영</li>
+                <li>슬라이더/스크롤 모션 패턴 통일</li>
+                <li>웹 표준 검사 및 디버깅 반영</li>
+              </ul>
+            </div>
+
+            <div class="btn_row" aria-label="프로젝트 링크">
+              <button class="btn preview_toggle" type="button" aria-expanded="false" aria-controls="preview_thumb_01">
+                프로젝트
+              </button>
+              <button class="btn doc_toggle" type="button" aria-expanded="false" aria-controls="doc_thumb_01">
+                프로젝트 기획서
+              </button>
+            </div>
+          </div>
+
+          <div class="thumb_panel_group">
+            <aside class="side_thumb preview_thumb" id="preview_thumb_01" aria-hidden="true">
+              <a href="https://tkdcjdyd8382.dothome.co.kr/cocacola/index.html" target="_blank" rel="noreferrer" class="doc_thumb_link">
+                <img src="img/cocacola_thumb.png" alt="코카콜라 리뉴얼 웹페이지 썸네일">
+                <span>웹페이지 보기</span>
+              </a>
+            </aside>
+
+            <aside class="side_thumb doc_thumb" id="doc_thumb_01" aria-hidden="true">
+              <a href="https://example.com/doc" target="_blank" rel="noreferrer" class="doc_thumb_link">
+                <img src="img/doc_thumb.png" alt="코카콜라 웹디자인 리뉴얼 기획서 썸네일">
+                <span>기획서 보기</span>
+              </a>
+            </aside>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="vendor.bundle.js"></script>
+  <script>
+(function ($) {
+  $(function () {
+    if ($.fn && typeof $.fn.swctallax === "function") {
+      $(".swctallax").swctallax({ jump: 0.1 });
+    }
+
+    if (typeof parallax === "function") {
+      parallax($(".work_card, .card"), 12, true);
+    }
+
+    var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var scrollBehavior = prefersReduced ? "auto" : "smooth";
+
+    var $quickLinks = $(".top_quick_nav .quick_link");
+    var $actionLinks = $(".intro_chip[data-target]");
+    var $toggleButtons = $(".doc_toggle, .preview_toggle");
+    var $cardWraps = $(".card_wrap");
+    var $revealItems = $(".reveal_left");
+    var $introTitle = $(".intro_title_sequence");
+    var sectionNodes = [];
+
+    $quickLinks.each(function () {
+      var targetSelector = $(this).attr("data-target");
+      var target = targetSelector ? document.querySelector(targetSelector) : null;
+      if (target) {
+        sectionNodes.push(target);
+      }
+    });
+
+    function focusSection(section) {
+      if (!section) return;
+      section.setAttribute("tabindex", "-1");
+      section.focus();
+    }
+
+    function setActiveNav(id) {
+      $quickLinks.each(function () {
+        var $link = $(this);
+        var isActive = $link.attr("data-target") === "#" + id;
+        $link.toggleClass("is-active", isActive);
+
+        if (isActive) {
+          $link.attr("aria-current", "true");
+        } else {
+          $link.removeAttr("aria-current");
+        }
+      });
+    }
+
+    function closeAllThumbs() {
+      $toggleButtons.each(function () {
+        var $button = $(this);
+        var targetId = $button.attr("aria-controls");
+        var $target = targetId ? $("#" + targetId) : $();
+
+        $button.attr("aria-expanded", "false");
+
+        if ($target.length) {
+          $target.removeClass("is_open");
+          $target.attr("aria-hidden", "true");
+        }
+      });
+    }
+
+    $quickLinks.add($actionLinks).on("click", function (e) {
+      var targetSelector = $(this).attr("data-target") || $(this).attr("href");
+      var target = targetSelector ? document.querySelector(targetSelector) : null;
+
+      if (!target) return;
+
+      e.preventDefault();
+
+      target.scrollIntoView({
+        behavior: scrollBehavior,
+        block: "start"
+      });
+
+      window.setTimeout(function () {
+        focusSection(target);
+      }, prefersReduced ? 0 : 250);
+    });
+
+    if ("IntersectionObserver" in window && sectionNodes.length) {
+      var sectionObserver = new IntersectionObserver(function (entries) {
+        var visibleSections = entries
+          .filter(function (entry) {
+            return entry.isIntersecting;
+          })
+          .sort(function (a, b) {
+            return b.intersectionRatio - a.intersectionRatio;
+          });
+
+        if (!visibleSections.length) return;
+        setActiveNav(visibleSections[0].target.id);
+      }, {
+        threshold: [0.3, 0.45, 0.6, 0.75]
+      });
+
+      sectionNodes.forEach(function (section) {
+        sectionObserver.observe(section);
+      });
+    } else if (sectionNodes.length) {
+      setActiveNav(sectionNodes[0].id);
+    }
+
+    if ("IntersectionObserver" in window) {
+      if ($revealItems.length) {
+        if (prefersReduced) {
+          $revealItems.addClass("is_inview");
+        } else {
+          var revealObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              $(entry.target).addClass("is_inview");
+              observer.unobserve(entry.target);
+            });
+          }, {
+            threshold: 0.18,
+            rootMargin: "0px 0px -8% 0px"
+          });
+
+          $revealItems.each(function () {
+            revealObserver.observe(this);
+          });
+        }
+      }
+
+      if ($cardWraps.length && window.innerWidth <= 767) {
+        if (prefersReduced) {
+          $cardWraps.addClass("is_inview");
+        } else {
+          var cardObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              $(entry.target).toggleClass("is_inview", entry.isIntersecting);
+            });
+          }, {
+            threshold: 0.35
+          });
+
+          $cardWraps.each(function () {
+            cardObserver.observe(this);
+          });
+        }
+      }
+
+      if ($introTitle.length) {
+        if (prefersReduced) {
+          $introTitle.addClass("is_inview");
+        } else {
+          var introTitleObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              $(entry.target).toggleClass("is_inview", entry.isIntersecting);
+            });
+          }, {
+            threshold: 0.35,
+            rootMargin: "0px 0px -10% 0px"
+          });
+
+          $introTitle.each(function () {
+            introTitleObserver.observe(this);
+          });
+        }
+      }
+    } else {
+      $revealItems.addClass("is_inview");
+      if (window.innerWidth <= 767) {
+        $cardWraps.addClass("is_inview");
+      }
+      $introTitle.addClass("is_inview");
+    }
+
+    $toggleButtons.on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var $button = $(this);
+      var targetId = $button.attr("aria-controls");
+      var $target = targetId ? $("#" + targetId) : $();
+
+      if (!$target.length) return;
+
+      var willOpen = !$target.hasClass("is_open");
+
+      if (willOpen) {
+        $button.attr("aria-expanded", "true");
+        $target.addClass("is_open");
+        $target.attr("aria-hidden", "false");
+      } else {
+        $button.attr("aria-expanded", "false");
+        $target.removeClass("is_open");
+        $target.attr("aria-hidden", "true");
+      }
+    });
+
+    $(document).on("click", function (e) {
+      var $target = $(e.target);
+
+      if (
+        $target.closest(".work_card").length ||
+        $target.closest(".top_quick_nav").length ||
+        $target.closest(".intro_chip").length
+      ) {
+        return;
+      }
+
+      closeAllThumbs();
+    });
+
+    if ($quickLinks.length) {
+      var firstTarget = $quickLinks.eq(0).attr("data-target");
+      if (firstTarget) {
+        var firstSection = document.querySelector(firstTarget);
+        if (firstSection) {
+          setActiveNav(firstSection.id);
+        }
+      }
+    }
+
+    $(window).on("scroll", function () {
+      var scrollTop = $(window).scrollTop();
+      var docHeight = $(document).height() - $(window).height();
+      var scrollPercent = (scrollTop / docHeight) * 100;
+      $(".scroll_progress").css("width", scrollPercent + "%");
+    });
+
+    $(window).on("scroll", function () {
+      var scrollTop = $(window).scrollTop();
+      if (scrollTop > 50) {
+        $(".top_quick_nav").addClass("is-scrolled");
+      } else {
+        $(".top_quick_nav").removeClass("is-scrolled");
+      }
+    });
+
+    var $heroPhoto = $(".hero_identity_photo");
+    if ($heroPhoto.length && !prefersReduced) {
+      var $heroImg = $heroPhoto.find("img");
+
+      $heroPhoto.on("mousemove", function (e) {
+        var rect = this.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        var width = rect.width;
+        var height = rect.height;
+        var rotateX = -((y / height) - 0.5) * 20;
+        var rotateY = ((x / width) - 0.5) * 20;
+        $heroImg.css('transform', 'perspective(1000px) scale(1.05) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg)');
+      });
+
+      $heroPhoto.on("mouseleave", function () {
+        $heroImg.css('transform', 'perspective(1000px) scale(1) rotateX(0) rotateY(0)');
+      });
+    }
+  });
+})(jQuery);
+</script>
+  
+</body>
+</html>
