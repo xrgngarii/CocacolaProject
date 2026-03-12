@@ -476,7 +476,7 @@
       }
 
       .sustainability_hero .hero_desc{
-        font-size: clamp(13px, 3.6vw, 16px);
+        font-size: clamp(16px, 2.4vw, 24px);
         font-weight: 700;
         margin-top: clamp(12px, 1.4vw, 18px);
         color: #fff8f2;

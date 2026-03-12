@@ -433,6 +433,13 @@
         color: #fff8f2;
         text-shadow: 0 6px 18px rgba(0,0,0,.55);
       }
+      .hero_text p{
+        font-size: clamp(16px, 2.4vw, 24px);
+        font-weight: 700;
+        margin-top: clamp(12px, 1.4vw, 18px);
+        color: #fff8f2;
+        text-shadow: 0 6px 18px rgba(0,0,0,.55);
+      }
       .hero_title,
       .hero_desc{
         font-family: "Poppins", "SUIT", sans-serif;
