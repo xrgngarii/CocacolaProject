@@ -69,9 +69,9 @@
       <div class="top_menu">
         <h2 class="hide">유틸 메뉴</h2>
         <ul>
-          <li><a href="#none">•한국어</a></li>
-          <li><a href="login.html">•LOGIN</a></li>
-          <li><a href="join.html">•JOIN</a></li>
+          <li><span class="lang_text">•한국어</span></li>
+          <li><a href="login.html" class="layer_popup_link" data-page="login.html">•LOGIN</a></li>
+          <li><a href="join.html" class="layer_popup_link" data-page="join.html">•JOIN</a></li>
         </ul>
       </div>
       <div class="search">
@@ -101,8 +101,8 @@
       </ul>
 
       <div class="tablet_util">
-        <a href="login.html" class="util_link">LOGIN</a>
-        <a href="join.html" class="util_link">JOIN</a>
+        <a href="login.html" class="util_link layer_popup_link" data-page="login.html">LOGIN</a>
+        <a href="join.html" class="util_link layer_popup_link" data-page="join.html">JOIN</a>
       </div>
 
       <div class="tablet_util2">
@@ -948,10 +948,18 @@
         </div>
       </div>
     </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bxslider@4/dist/jquery.bxslider.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f37a76a723dbf56449dfd403d883a10&libraries=services"></script>
-  <script src="js/main.js"></script>
+  <div class="page_popup_dim" id="pagePopup" aria-hidden="true">
+  <div class="page_popup" role="dialog" aria-modal="true" aria-label="페이지 팝업">
+    <button type="button" class="page_popup_close" id="pagePopupClose" aria-label="팝업 닫기">✕</button>
+    <iframe src="" class="page_popup_frame" id="pagePopupFrame" title="팝업 페이지"></iframe>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4/dist/jquery.bxslider.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f37a76a723dbf56449dfd403d883a10&libraries=services"></script>
+<script src="js/main.js"></script>
+</body>
 </body>
 </html>
