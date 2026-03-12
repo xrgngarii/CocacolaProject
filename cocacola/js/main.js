@@ -1188,3 +1188,46 @@ $(function () {
     }
   });
 })();
+(() => {
+  const popup = document.getElementById("pagePopup");
+  const popupFrame = document.getElementById("pagePopupFrame");
+  const popupClose = document.getElementById("pagePopupClose");
+  const popupLinks = document.querySelectorAll(".layer_popup_link");
+
+  if (!popup || !popupFrame || !popupClose || !popupLinks.length) return;
+
+  const openPopup = (url) => {
+    popupFrame.src = url;
+    popup.classList.add("is-open");
+    popup.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closePopup = () => {
+    popup.classList.remove("is-open");
+    popup.setAttribute("aria-hidden", "true");
+    popupFrame.src = "";
+    document.body.style.overflow = "";
+  };
+
+  popupLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      openPopup(link.dataset.page || link.getAttribute("href"));
+    });
+  });
+
+  popupClose.addEventListener("click", closePopup);
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      closePopup();
+    }
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && popup.classList.contains("is-open")) {
+      closePopup();
+    }
+  });
+})();

@@ -1,3 +1,4 @@
+
 [
   "images/cocacola_login_logo_hover.png",
   "images/join_btn_hover.png",
@@ -157,4 +158,45 @@
 
   apply();
   window.addEventListener("resize", apply);
+})();
+(() => {
+  const addr0 = document.getElementById("addr0");
+  const addr1 = document.getElementById("addr1");
+  const addr2 = document.getElementById("addr2");
+  const addrRow = document.querySelector(".row-addr");
+  const postcodeBtn = addrRow ? addrRow.querySelector(".btn") : null;
+
+  if (!addr0 || !addr1 || !postcodeBtn || !window.kakao || !window.kakao.Postcode) return;
+
+  const openPostcode = () => {
+    new kakao.Postcode({
+      oncomplete: (data) => {
+        const zonecode = data.zonecode || "";
+        const roadAddress = data.roadAddress || "";
+        const jibunAddress = data.jibunAddress || "";
+        const extraParts = [];
+
+        if (data.bname && /[동로가]$/g.test(data.bname)) {
+          extraParts.push(data.bname);
+        }
+
+        if (data.buildingName && data.apartment === "Y") {
+          extraParts.push(data.buildingName);
+        }
+
+        const extraAddress = extraParts.length ? ` (${extraParts.join(", ")})` : "";
+        const baseAddress = roadAddress || jibunAddress;
+
+        addr0.value = zonecode;
+        addr1.value = `${baseAddress}${roadAddress ? extraAddress : ""}`;
+        if (addr2) {
+          addr2.focus();
+        }
+      }
+    }).open({
+      popupTitle: "우편번호 검색"
+    });
+  };
+
+  postcodeBtn.addEventListener("click", openPostcode);
 })();
