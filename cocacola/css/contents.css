@@ -678,59 +678,73 @@
         margin-bottom: clamp(18px, 4vw, 42px);
         color: #fff8f2;
       }
-      .video_modal {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 20000;
+      .video_modal{
+        position:fixed;
+        inset:0;
+        z-index:9999;
       }
-      .video_modal.is-open {
-        display: block;
+
+      .video_dim{
+        position:absolute;
+        inset:0;
+        background:rgba(0,0,0,.78);
       }
-      .video_modal[aria-hidden="false"] {
-        display: block;
+
+      .video_inner{
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:min(92vw, 960px);
+        transform:translate(-50%, -50%);
+        border-radius:20px;
+        overflow:hidden;
+        background:#111;
+        box-shadow:0 24px 60px rgba(0,0,0,.4);
       }
-      .video_dim {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.75);
+
+      .video_close{
+        position:absolute;
+        top:12px;
+        right:12px;
+        z-index:2;
+        width:42px;
+        height:42px;
+        border:0;
+        border-radius:999px;
+        background:rgba(0,0,0,.6);
+        color:#fff;
+        font-size:22px;
+        cursor:pointer;
       }
-      .video_box {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: min(960px, 92vw);
-        background: #111;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 18px;
-        overflow: hidden;
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+
+      .video_frame{
+        position:relative;
+        width:100%;
+        padding-top:56.25%;
       }
-      .video_close {
-        position: absolute;
-        right: 12px;
-        top: 10px;
-        z-index: 2;
-        border: 0;
-        background: transparent;
-        color: #fff8f2;
-        font-size: 26px;
-        cursor: pointer;
-        padding: 8px 12px;
+
+      .video_frame iframe{
+        position:absolute;
+        inset:0;
+        width:100%;
+        height:100%;
+        border:0;
+        display:block;
       }
-      .video_frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16/9;
-        background: #000;
-      }
-      .video_frame iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
+
+      @media (max-width:706px){
+        .video_inner{
+          width:94vw;
+          border-radius:16px;
+        }
+
+        .video_close{
+          top:10px;
+          right:10px;
+          width:38px;
+          height:38px;
+          font-size:20px;
+        }
       }
       .rc_slider {
         display: none;

@@ -191,3 +191,35 @@
         color: rgba(255, 248, 242, 0.62);
         line-height: 1.6;
       }
+      .back_home_wrap{
+        display:flex;
+        justify-content:center;
+        margin:20px 0 0;
+      }
+
+      .back_home_btn{
+        display:inline-flex;
+        align-items:center;
+        justify-content:center;
+        min-width:160px;
+        height:44px;
+        padding:0 20px;
+        border-radius:999px;
+        background:rgba(255,255,255,.14);
+        color:#fff;
+        font-size:14px;
+        font-weight:700;
+        text-decoration:none;
+        transition:background-color .25s ease, transform .25s ease, opacity .25s ease;
+      }
+
+      .back_home_btn:hover{
+        background:rgba(255,255,255,.22);
+        transform:translateY(-1px);
+        opacity:1;
+      }
+
+      .back_home_btn:focus-visible{
+        outline:2px solid rgba(255,255,255,.7);
+        outline-offset:3px;
+      }
