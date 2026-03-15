@@ -1196,6 +1196,13 @@ $(function () {
 
   if (!popup || !popupFrame || !popupClose || !popupLinks.length) return;
 
+  const noPopupPages = ["login.html", "join.html", "join_agree.html"];
+
+  const isNoPopupLink = (link) => {
+    const url = (link.dataset.page || link.getAttribute("href") || "").trim();
+    return noPopupPages.some((page) => url.includes(page));
+  };
+
   const openPopup = (url) => {
     popupFrame.src = url;
     popup.classList.add("is-open");
@@ -1212,8 +1219,14 @@ $(function () {
 
   popupLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
+      const url = link.dataset.page || link.getAttribute("href");
+
+      if (isNoPopupLink(link)) {
+        return;
+      }
+
       e.preventDefault();
-      openPopup(link.dataset.page || link.getAttribute("href"));
+      openPopup(url);
     });
   });
 

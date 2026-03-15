@@ -1986,3 +1986,10 @@
       background: #f40009;
       color: #fff;
     }
+    .top_menu ul li:first-child a,
+    .top_menu ul li:first-child a:hover,
+    .top_menu ul li:first-child a:focus {
+      color: #1a1a1a;
+      cursor: default;
+      text-decoration: none;
+    }

@@ -21,17 +21,29 @@
   }
 
   const cancelBtn = document.querySelector(".btn-cancel");
-  if (cancelBtn) {
-    cancelBtn.addEventListener("mouseenter", () => {
-      cancelBtn.style.backgroundImage = 'url("images/join_cancel_btn_hover.png")';
-    });
-    cancelBtn.addEventListener("mouseleave", () => {
-      cancelBtn.style.backgroundImage = 'url("images/join_cancel_btn.png")';
-    });
-    cancelBtn.addEventListener("click", () => {
-      location.href = "index.html";
-    });
+if (cancelBtn) {
+  cancelBtn.addEventListener("mouseenter", () => {
+    cancelBtn.style.backgroundImage = 'url("images/join_cancel_btn_hover.png")';
+  });
+  cancelBtn.addEventListener("mouseleave", () => {
+    cancelBtn.style.backgroundImage = 'url("images/join_cancel_btn.png")';
+  });
+  cancelBtn.addEventListener("click", closePage);
+}
+
+function closePage() {
+  if (window.opener) {
+    window.close();
+    return;
   }
+
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
+  }
+
+  location.href = "index.html";
+}
 
   document.querySelectorAll(".btn-idcheck").forEach((btn) => {
     btn.addEventListener("mouseenter", () => {
@@ -200,3 +212,77 @@
 
   postcodeBtn.addEventListener("click", openPostcode);
 })();
+(() => {
+  const form = document.querySelector(".join_form");
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const terms = sessionStorage.getItem("join_terms");
+    const privacy = sessionStorage.getItem("join_privacy");
+
+    if (terms !== "Y" || privacy !== "Y") {
+      location.href = "join_agree.html";
+      return;
+    }
+
+    const marketing = sessionStorage.getItem("join_marketing") || "N";
+    console.log("마케팅 수신 동의:", marketing);
+
+    location.href = "login.html";
+  });
+})();
+function closePage() {
+  if (window.opener) {
+    window.close();
+    return;
+  }
+
+  if (window.history.length > 1) {
+    window.history.back();
+    return;
+  }
+
+  location.href = "index.html";
+}
+const joinId = document.getElementById("join_id");
+const idCheckBtn = document.getElementById("idCheckBtn");
+const idCheckMsg = document.getElementById("idCheckMsg");
+
+if (joinId) {
+  joinId.addEventListener("input", () => {
+    joinId.value = joinId.value.replace(/[^a-z0-9]/g, "");
+
+    if (idCheckMsg) {
+      idCheckMsg.textContent = "";
+      idCheckMsg.classList.remove("is-error", "is-success", "is-show");
+    }
+  });
+}
+
+if (idCheckBtn && joinId && idCheckMsg) {
+  idCheckBtn.addEventListener("click", () => {
+    const value = joinId.value.trim();
+    const idRule = /^[a-z0-9]{4,16}$/;
+
+    idCheckMsg.classList.remove("is-error", "is-success");
+
+    if (!value) {
+      idCheckMsg.textContent = "아이디를 입력해주세요.";
+      idCheckMsg.classList.add("is-error", "is-show");
+      joinId.focus();
+      return;
+    }
+
+    if (!idRule.test(value)) {
+      idCheckMsg.textContent = "영문소문자/숫자 조합 4~16자로 입력해주세요.";
+      idCheckMsg.classList.add("is-error", "is-show");
+      joinId.focus();
+      return;
+    }
+
+    idCheckMsg.textContent = "사용 가능한 아이디입니다.";
+    idCheckMsg.classList.add("is-success", "is-show");
+  });
+}
