@@ -1256,3 +1256,13 @@ section > div.center > h2{
     transition:none;
   }
 }
+.work_kv .kv_row{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.work_kv .kv_row dt{
+  min-width:140px;
+  white-space:nowrap;
+}
