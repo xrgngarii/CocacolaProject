@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코카콜라 약관동의</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_index.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_index.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css">
+  <link rel="stylesheet" href="css/join_agree.css">
+</head>
+<body>
+  <main class="agree_page">
+    <img src="images/login_bg.png" alt="회원가입 배경" class="agree_bg">
+
+    <section class="agree_box" aria-labelledby="agree_title">
+      <h1 class="agree_logo">
+        <a href="index.html">
+          <img src="images/cocacola_login_logo.png" alt="코카콜라">
+        </a>
+      </h1>
+
+      <div class="agree_head">
+        <p class="agree_step">STEP 1</p>
+        <h2 id="agree_title">약관 동의</h2>
+        <p class="agree_desc">
+          코카콜라 서비스 이용을 위해 약관 및 개인정보 수집/이용 동의가 필요합니다.
+        </p>
+      </div>
+
+      <form class="agree_form" id="agreeForm" action="join.html" method="get">
+        <label class="agree_all">
+          <input type="checkbox" id="agree_all">
+          <span>전체 동의</span>
+        </label>
+
+        <ul class="agree_list">
+        <li class="agree_item">
+            <div class="agree_label">
+            <span class="agree_left">
+                <input type="checkbox" class="agree_check agree_required" name="terms" value="Y" id="agree_terms">
+                <label for="agree_terms">[필수] 이용약관 동의</label>
+            </span>
+            <button type="button" class="agree_view" data-target="terms_detail">보기</button>
+            </div>
+            <div class="agree_detail" id="terms_detail">
+            <strong>이용약관</strong>
+            <p>본 약관은 코카콜라 서비스 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항을 규정합니다.</p>
+            <p>회원은 본 서비스를 관련 법령 및 본 약관에 따라 이용하여야 하며, 서비스 운영을 방해하거나 부정한 방법으로 이용해서는 안 됩니다.</p>
+            <p>회사는 서비스 운영상 필요할 경우 제공 내용, 구성, 기능을 변경할 수 있으며, 중요한 변경사항은 사전에 안내합니다.</p>
+            </div>
+        </li>
+
+        <li class="agree_item">
+            <div class="agree_label">
+            <span class="agree_left">
+                <input type="checkbox" class="agree_check agree_required" name="privacy" value="Y" id="agree_privacy">
+                <label for="agree_privacy">[필수] 개인정보 수집·이용 동의</label>
+            </span>
+            <button type="button" class="agree_view" data-target="privacy_detail">보기</button>
+            </div>
+            <div class="agree_detail" id="privacy_detail">
+            <strong>개인정보 수집·이용 동의</strong>
+            <p>회사는 회원가입, 본인 확인, 고객 응대, 서비스 제공을 위해 필요한 최소한의 개인정보를 수집할 수 있습니다.</p>
+            <p>수집 항목에는 아이디, 비밀번호, 연락처, 이메일, 주소 등이 포함될 수 있으며, 수집 목적 달성 후 관련 법령에 따라 보관 또는 파기됩니다.</p>
+            <p>회원은 개인정보 수집 및 이용에 대한 동의를 거부할 수 있으나, 필수 항목 동의 거부 시 회원가입이 제한될 수 있습니다.</p>
+            </div>
+        </li>
+
+        <li class="agree_item">
+            <div class="agree_label">
+            <span class="agree_left">
+                <input type="checkbox" class="agree_check" name="marketing" value="Y" id="agree_marketing">
+                <label for="agree_marketing">[선택] 쇼핑정보 수신 동의</label>
+            </span>
+            <button type="button" class="agree_view" data-target="marketing_detail">보기</button>
+            </div>
+            <div class="agree_detail" id="marketing_detail">
+            <strong>쇼핑정보 수신 동의</strong>
+            <p>회원은 이벤트, 프로모션, 신제품, 혜택 안내 등 마케팅 정보를 이메일 또는 문자 등의 방식으로 수신할 수 있습니다.</p>
+            <p>본 항목은 선택 동의이며, 동의하지 않아도 회원가입 및 기본 서비스 이용에는 제한이 없습니다.</p>
+            <p>회원은 언제든지 마이페이지 또는 고객센터를 통해 수신 동의를 변경하거나 철회할 수 있습니다.</p>
+            </div>
+        </li>
+        </ul>
+
+        <div class="agree_notice">
+          필수 약관에 동의해야 다음 단계로 진행할 수 있습니다.
+        </div>
+
+        <div class="agree_btns">
+          <button type="button" class="btn btn_cancel" onclick="closePage()">닫기</button>
+          <button type="submit" class="btn btn_next" id="agreeNext" disabled>다음</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="js/join_agree.js"></script>
+</body>
+</html>

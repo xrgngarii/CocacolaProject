@@ -66,8 +66,9 @@
                 required
               >
             </div>
-            <button type="button" class="btn btn-idcheck">아이디 확인</button>
+            <button type="button" class="btn btn-idcheck" id="idCheckBtn">아이디 확인</button>
           </div>
+          <p class="id_check_msg" id="idCheckMsg" aria-live="polite"></p>
 
           <div class="frame">
             <label class="hide" for="join_pw">비밀번호</label>
@@ -274,12 +275,8 @@
 
           <div class="row row-bottom">
             <button type="submit" class="btn btn-join">회원가입</button>
-            <button
-              type="button"
-              class="btn btn-cancel"
-              onclick="location.href='index.html'"
-            >
-              회원가입취소
+            <button type="button" class="btn btn-cancel" onclick="closePage()">
+              닫기
             </button>
           </div>
         </fieldset>
@@ -287,5 +284,10 @@
     </main>
     <script src="//t1.kakaocdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="js/join.js"></script>
+    <script>
+      if (sessionStorage.getItem("join_terms") !== "Y" || sessionStorage.getItem("join_privacy") !== "Y") {
+        location.replace("join_agree.html");
+      }
+    </script>
   </body>
 </html>
