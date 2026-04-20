@@ -1,0 +1,38 @@
+<div class="contact-popup-content">
+
+  <div class="contact-popup-inner">
+    <button class="contact-popup-close" type="button" aria-label="Close contact popup">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-intro">딥디크에 대한 질문, 제안, 혹은 협업 문의 등 무엇이든 좋습니다. 아래 양식을 통해 메시지를 남겨주시면 확인 후 회신드리겠습니다.</p>
+
+    <form class="contact-form" action="#" method="post" onsubmit="alert('메시지가 전송되었습니다.'); return false;">
+      <div class="form-group">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-subject">Subject</label>
+        <input type="text" id="contact-subject" name="subject" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required></textarea>
+      </div>
+
+      <button type="submit" class="contact-submit-btn">Send Message</button>
+    </form>
+  </div>
+</div>
