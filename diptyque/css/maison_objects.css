@@ -1,0 +1,166 @@
+
+    .maison-hero {
+      position: relative;
+      height: 60vh;
+      min-height: 500px;
+      border-radius: 32px;
+      overflow: hidden;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .maison-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=2592&auto=format&fit=crop') center/cover;
+      filter: brightness(0.7);
+      animation: zoomIn 10s ease-out forwards;
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .maison-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 0 20px;
+    }
+    .maison-title-wrap {
+      position: relative;
+      width: fit-content;
+      margin: 0 auto 24px;
+    }
+    .maison-title {
+      font: 400 clamp(3.5rem, 6vw, 5.5rem)/0.9 var(--serif);
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .maison-symbol {
+      position: absolute;
+      top: 110%;
+      left: calc(100% + 100px);
+      transform: translateY(-50%);
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      opacity: 0.88;
+      filter: brightness(0) invert(1); /* 어두운 배경 대비 화이트 아이콘 처리 */
+    }
+    
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    .room-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      aspect-ratio: 1.2;
+      cursor: pointer;
+    }
+    .room-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .room-card:hover .room-img {
+      transform: scale(1.05);
+    }
+    .room-label {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      background: rgba(255,255,255,0.9);
+      padding: 12px 20px;
+      border-radius: 99px;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--text);
+    }
+    
+    .object-collection {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 100px;
+    }
+    .object-card {
+      text-align: center;
+      display: block;
+      color: var(--bg);
+      text-decoration: none;
+      background: var(--text);
+      padding: 24px;
+      border-radius: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .object-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(34, 28, 22, 0.15);
+    }
+    .object-img-wrap {
+      background: transparent;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      overflow: hidden;
+    }
+
+    .object-img-wrap img {
+      width: auto;
+      max-width: 100%;
+      max-height: 240px;
+      margin: 0 auto;
+      transition: transform 0.5s ease;
+      border-radius: 16px;
+    }
+
+    .object-card:hover .object-img-wrap img {
+      transform: scale(1.08);
+    }
+
+    .object-card h3 {
+      font: 500 1.45rem/1 var(--serif);
+      margin-bottom: 10px;
+    }
+    .object-card.scroll-animate-card {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--exit-delay, 0s);
+    }
+    .object-card.scroll-animate-card.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: var(--enter-delay, 0s);
+    }
+    @media (max-width: 768px) {
+      .room-grid { grid-template-columns: 1fr; }
+      .maison-title-wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 32px;
+      }
+      .maison-symbol {
+        position: static;
+        width: 120px;
+        height: 120px;
+        transform: none;
+        opacity: 1;
+      }
+    }

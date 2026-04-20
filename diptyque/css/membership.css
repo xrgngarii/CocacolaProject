@@ -1,0 +1,316 @@
+
+    .membership-popup-content {
+      width: 100%;
+      color: var(--text);
+      font-family: var(--sans);
+    }
+
+    .membership-shell {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      border-radius: 32px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(143, 118, 81, 0.14), transparent 26%),
+        radial-gradient(circle at bottom left, rgba(31, 106, 90, 0.08), transparent 22%),
+        linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.58)),
+        var(--bg);
+      border: 1px solid rgba(255,255,255,0.62);
+      box-shadow: 0 28px 80px rgba(28, 22, 16, 0.16);
+      position: relative;
+    }
+
+    .membership-close-btn {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.56);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-soft);
+      cursor: pointer;
+      z-index: 20;
+      transition: transform 0.28s ease, background 0.28s ease, color 0.28s ease;
+    }
+
+    .membership-close-btn:hover {
+      transform: rotate(90deg) scale(1.05);
+      background: #fff;
+      color: var(--text);
+    }
+
+    .membership-close-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .membership-hero {
+      display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 28px;
+    align-items: stretch;
+    }
+
+    .membership-hero-copy {
+      padding: clamp(34px, 5vw, 56px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .membership-kicker {
+      display: inline-block;
+      margin-bottom: 16px;
+      font-size: 0.7rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .membership-title {
+      font: 400 clamp(2.8rem, 5vw, 4.8rem)/0.92 var(--serif);
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+
+    .membership-desc {
+      max-width: 42ch;
+      color: var(--text-soft);
+      line-height: 1.9;
+      font-size: 1rem;
+    }
+
+    .membership-hero-visual {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.18));
+    }
+
+    .membership-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    z-index: 1;
+    }
+
+    .membership-hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(74,59,42,0.06), rgba(74,59,42,0.22));
+    z-index: 2;
+    pointer-events: none;
+    }
+
+    .membership-body {
+      padding: 0 clamp(20px, 4vw, 40px) clamp(28px, 4vw, 42px);
+      display: grid;
+      gap: 22px;
+    }
+
+    .membership-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .membership-card {
+      padding: 24px 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.52);
+      border: 1px solid rgba(255,255,255,0.68);
+      box-shadow: 0 16px 36px rgba(34, 28, 22, 0.06);
+    }
+
+    .membership-card-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      font-size: 0.66rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .membership-card-title {
+      font: 500 clamp(1.5rem, 2vw, 1.9rem)/1 var(--serif);
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .membership-card-text {
+      color: var(--text-soft);
+      line-height: 1.8;
+      font-size: 0.94rem;
+    }
+
+    .membership-benefits {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .membership-panel {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.52);
+      border: 1px solid rgba(255,255,255,0.68);
+      box-shadow: 0 16px 36px rgba(34, 28, 22, 0.06);
+    }
+
+    .membership-panel-title {
+      font: 500 clamp(1.8rem, 2.2vw, 2.4rem)/1 var(--serif);
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .membership-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .membership-list li {
+      position: relative;
+      padding-left: 18px;
+      color: var(--text-soft);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .membership-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .membership-tier-wrap {
+      display: grid;
+      gap: 12px;
+    }
+
+    .membership-tier {
+      padding: 18px 18px 16px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(34, 28, 22, 0.08);
+    }
+
+    .membership-tier strong {
+      display: block;
+      margin-bottom: 8px;
+      font: 500 1.25rem/1 var(--serif);
+      color: var(--text);
+    }
+
+    .membership-tier p {
+      color: var(--text-soft);
+      line-height: 1.7;
+      font-size: 0.92rem;
+    }
+
+    .membership-cta {
+      padding: 30px 28px;
+      border-radius: 28px;
+      background: var(--text);
+      color: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .membership-cta-copy strong {
+      display: block;
+      margin-bottom: 10px;
+      font: 500 clamp(1.8rem, 2.5vw, 2.5rem)/1 var(--serif);
+      color: var(--bg);
+    }
+
+    .membership-cta-copy p {
+      color: rgba(245,241,234,0.78);
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .membership-cta-btn {
+      min-width: 190px;
+      padding: 16px 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(245,241,234,0.24);
+      background: rgba(255,255,255,0.08);
+      color: var(--bg);
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.28s ease, background 0.28s ease, border-color 0.28s ease;
+    }
+
+    .membership-cta-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(245,241,234,0.4);
+    }
+
+    @media (max-width: 980px) {
+      .membership-hero,
+      .membership-grid,
+      .membership-benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .membership-hero-visual {
+        min-height: 240px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .membership-shell {
+        border-radius: 24px;
+      }
+
+      .membership-close-btn {
+        top: 14px;
+        right: 14px;
+      }
+
+      .membership-hero-copy {
+        padding: 28px 18px 22px;
+      }
+
+      .membership-body {
+        padding: 0 16px 18px;
+      }
+
+      .membership-card,
+      .membership-panel,
+      .membership-cta {
+        border-radius: 22px;
+        padding: 22px 18px;
+      }
+
+      .membership-cta {
+        align-items: flex-start;
+      }
+
+      .membership-cta-btn {
+        width: 100%;
+      }
+    }
